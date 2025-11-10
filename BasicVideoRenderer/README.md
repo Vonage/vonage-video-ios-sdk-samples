@@ -1,64 +1,181 @@
 Basic Video Renderer Sample App
 ===============================
 
-The Basic-Video-Renderer app is a very simple application meant to get a new developer
-started with custom renderers using the Vonage Client SDK.
+This example demonstrates how to use a **custom video renderer** in Swift to display a **black-and-white** version of a `OTPublisher` video stream using the **Vonage Video iOS SDK**.
 
 Quick Start
 -----------
 
 To use this application:
 
-1. Follow the instructions in the [Quick Start](../README.md#quick-start)
-   section of the main README file for this repository.
-
-   Among other things, you need to set values for the `kAppId`, `kSessionId`,
-   and `kToken` constants. Follow the [Getting started](https://developer.vonage.com/en/video/getting-started) guide to learn how to obtain these credentials.
+1. You need to set values for the `kAppId`, `kSessionId` and `kToken` constants. Follow the [Getting started](https://developer.vonage.com/en/video/getting-started) guide to learn how to obtain these credentials.
 
 2. When you run the application, it connects to a session and
    publishes an audio-video stream from your device to the session.
 
-3. Run the app on a second client. You can do this by deploying the app to an
-   iOS device and testing it in the simulator at the same time. Or you can use
-   the browser_demo.html file to connect in a browser (see the following
-   section).
+Tutorial
+-----------
 
-   When the second client connects, it also publishes a stream to the session,
-   and both clients subscribe to (view) each other’s stream.
+## Overview
 
-Application Notes
------------------
+After initializing the `OTPublisher` object in the `VonageVideoManager`, we assign its `videoRender` property to an instance of our custom renderer `CustomVideoRender`.
 
-*   Follow the code from the `VonageVideoManager.setup()` method through
-    to the callbacks to see how streams are created and handled in
-    the Vonage iOS SDK.
+## VonageVideoManager.swift
 
-*   By default, all delegate methods from classes in the Vonage iOS SDK are
-    invoked on the main queue. This means that you can directly modify the view
-    hierarchy from inside the callback, without any asynchronous callouts.
+```swift
+import OpenTok
+import SwiftUI
 
-*   When the ContentView calls task closure, the VonageVideoManager tries to connect and launch the
-    `OTSession.initWithApiKey(_:, sessionId:,delegate:)` method to initialize
-    a Session object. The app then calls the
-    `OTSession.connectWithToken(_:, error:)` to connect to the session. The
-    `OTSessionDelegate.sessionDidConnect(_:)` message is sent when the app
-    connects to the session.
+let renderer = CustomVideoRender()
 
-*   The `doPublish()` method of the app initializes a publisher and passes it
-    into the `OTSession.publish(_:,error:)` method. This publishes an
-    audio-video stream to the session.
+private lazy var publisher: OTPublisher? = {
+    let settings = OTPublisherSettings()
+    settings.name = UIDevice.current.name
+    return OTPublisher(delegate: self, settings: settings)
+}()
 
-*   The `OTSessionDelegate.session(_:,streamCreated:)` message is sent when
-    a new stream is created in the session. In response, the
-    method calls `OTSubscriber(stream:,delegate:)`,
-    passing in the OTStream object. This causes the app to subscribe to the
-    stream.
+private func doPublish() {
+    ...
     
-*   Setup your video renderer in the `doPublish()` method, assign the `publisher.videoRender` property,
-    add proper views
+    // Publish & assign renderer
+    guard let publisher else { return }
+    publisher.videoRender = renderer
+    session?.publish(publisher, error: &error)
     
+    // Setup view
+    guard let pubView = publisher.view else { return }
+    pubView.frame = CGRect(x: 0, y: 0, width: 250, height: 250)
+    renderer.view.frame = CGRect(x: 0, y: 0, width: 250, height: 250)
+    pubView.addSubview(renderer.view)
+    
+    // Wrap structure allows displaying UIViews in SwiftUI
+    DispatchQueue.main.async {
+        self.pubView = AnyView(Wrap(pubView))
+    }
+}
+```
 
- To add a second publisher (which will display as a subscriber in your emulator), either run the app a second time in an iOS device or use the OpenTok Playground to connect to the session in a supported web browser (Chrome, Firefox, or Internet Explorer 10-11) by following the steps below:
+## CustomVideoRender.swift
+
+CustomVideoRender is a custom class that implements the OTVideoRender protocol defined by the Vonage iOS SDK.
+This protocol allows you to define your own custom renderer for a publisher or subscriber video stream.
+
+```swift
+final class CustomVideoRender: NSObject, OTVideoRender {
+    let view = CustomRenderView(frame: .zero)
+    
+    func renderVideoFrame(_ frame: OTVideoFrame) {
+        view.renderVideoFrame(frame)
+    }
+}
+```
+
+## CustomRenderView.swift
+
+CustomRenderView is a subclass of `UIView` responsible for drawing the black-and-white image on screen.
+It takes each video frame, converts it to grayscale, creates a CGImage, and triggers a redraw.
+
+```swift
+class CustomRenderView: UIView {
+    private var renderQueue = DispatchQueue.global(qos: .userInitiated)
+    private var image: CGImage? = nil
+    
+    func renderVideoFrame(_ frame: OTVideoFrame) {
+        let frameToRender = frame
+        
+        renderQueue.sync {
+            // Release previous image if any exists
+            if image != nil {
+                image = nil
+            }
+            guard let format = frame.format else { return }
+            let width = Int(format.imageWidth)
+            let height = Int(format.imageHeight)
+            let bufferSize = width * height * 3
+            
+            guard let rawYPlane = frameToRender.planes?.pointer(at: 0) else { return }
+            let yplane = rawYPlane.bindMemory(to: UInt8.self, capacity: width * height)
+            let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: bufferSize)
+            
+            // Fill RGB buffer with grayscale image (Y only)
+            for i in 0..<height {
+                for j in 0..<width {
+                    let pixelIndex = (i * width * 3) + (j * 3)
+                    let yValue = yplane[(i * width) + j]
+                    buffer[pixelIndex] = yValue
+                    buffer[pixelIndex + 1] = yValue
+                    buffer[pixelIndex + 2] = yValue
+                }
+            }
+            
+            // Release buffer when CGDataProvider is done
+            let releaseCallback: CGDataProviderReleaseDataCallback = { _, data, _ in
+                data.deallocate()
+            }
+            
+            guard let provider = CGDataProvider(dataInfo: nil, data: buffer, size: bufferSize, releaseData: releaseCallback) else {
+                buffer.deallocate()
+                return
+            }
+            
+            // Create CGImage
+            image = CGImage(
+                width: width,
+                height: height,
+                bitsPerComponent: 8,
+                bitsPerPixel: 24,
+                bytesPerRow: 3 * width,
+                space: CGColorSpaceCreateDeviceRGB(),
+                bitmapInfo: CGBitmapInfo(rawValue: CGImageAlphaInfo.none.rawValue),
+                provider: provider,
+                decode: nil,
+                shouldInterpolate: false,
+                intent: .defaultIntent
+            )
+            
+            DispatchQueue.main.async { [weak self] in
+                self?.setNeedsDisplay()
+            }
+        }
+    }
+        
+    // MARK: - Drawing
+    override func draw(_ rect: CGRect) {
+        guard let context = UIGraphicsGetCurrentContext() else { return }
+        var imgCopy: CGImage?
+        
+        renderQueue.sync {
+            if let currentImage = image {
+                imgCopy = currentImage.copy()
+            }
+        }
+        
+        if let img = imgCopy {
+            context.draw(img, in: self.bounds)
+        }
+    }
+}
+```
+
+## Explanation
+
+`OTPublisher.videoRender`
+Assigns our custom renderer to handle the video output of the publisher.
+
+`OTVideoRender` protocol
+Requires implementing renderVideoFrame(_:), which provides a OTVideoFrame object for each frame.
+
+`CustomRenderView`
+Converts the Y (luminance) plane into grayscale RGB values.
+Builds a CGImage and draws it to the view.
+
+Grayscale Conversion
+Each pixel’s luminance (Y value) is copied into all three color channels (R, G, B), resulting in a black-and-white frame. 
+    
+Additional Notes
+-----------
+
+ To add a second publisher (which will display as a subscriber in your emulator), either run the app a second time in an iOS device or use the OpenTok Playground to connect to the session in a supported web browser by following the steps below:
 
 1. Go to [Vonage Playground](https://tools.vonage.com/video/playground) (must be logged into your [Account](https://dashboard.vonage.com/))
 2. Select the **Join existing session** tab
