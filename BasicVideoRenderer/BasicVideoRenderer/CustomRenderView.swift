@@ -1,33 +1,17 @@
 //
 //  CustomRenderView.swift
-//  Basic-Video-Renderer
+//  BasicVideoRenderer
 //
-//  Created by Artur Osiński on 27/10/2025.
-//  Copyright © 2025 Vonage. All rights reserved.
+//  Created by Artur Osiński on 31/10/2025.
 //
 
+import UIKit
 import OpenTok
 
 class CustomRenderView: UIView {
+    private var renderQueue = DispatchQueue.global(qos: .userInitiated)
+    private var image: CGImage? = nil
     
-    // MARK: - Properties
-    var renderQueue: DispatchQueue
-    private var image: CGImage?
-    
-    // MARK: - Init
-    override init(frame: CGRect) {
-        self.renderQueue = DispatchQueue.global(qos: .userInitiated)
-        super.init(frame: frame)
-        self.image = nil
-    }
-    
-    required init?(coder: NSCoder) {
-        self.renderQueue = DispatchQueue.global(qos: .userInitiated)
-        super.init(coder: coder)
-        self.image = nil
-    }
-    
-    // MARK: - Render Video Frame
     func renderVideoFrame(_ frame: OTVideoFrame) {
         let frameToRender = frame
         

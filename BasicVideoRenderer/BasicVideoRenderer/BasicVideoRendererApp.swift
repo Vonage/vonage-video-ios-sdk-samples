@@ -11,7 +11,7 @@ import SwiftUI
 struct BasicVideoRendererApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(manager: VonageVideoManager())
         }
     }
 }

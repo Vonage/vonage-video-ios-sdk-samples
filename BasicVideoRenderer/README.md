@@ -2,7 +2,7 @@ Basic Video Renderer Sample App
 ===============================
 
 The Basic-Video-Renderer app is a very simple application meant to get a new developer
-started using the Vonage Client SDK.
+started with custom renderers using the Vonage Client SDK.
 
 Quick Start
 -----------
@@ -13,9 +13,7 @@ To use this application:
    section of the main README file for this repository.
 
    Among other things, you need to set values for the `kAppId`, `kSessionId`,
-   and `kToken` constants. See [Obtaining 
-   Credentials](../README.md#obtaining-opentok-credentials)
-   in the main README file for the repository.
+   and `kToken` constants. Follow the [Getting started](https://developer.vonage.com/en/video/getting-started) guide to learn how to obtain these credentials.
 
 2. When you run the application, it connects to a session and
    publishes an audio-video stream from your device to the session.
@@ -31,7 +29,7 @@ To use this application:
 Application Notes
 -----------------
 
-*   Follow the code from the `ViewController.viewDidLoad(_:)` method through
+*   Follow the code from the `VonageVideoManager.setup()` method through
     to the callbacks to see how streams are created and handled in
     the Vonage iOS SDK.
 
@@ -39,7 +37,7 @@ Application Notes
     invoked on the main queue. This means that you can directly modify the view
     hierarchy from inside the callback, without any asynchronous callouts.
 
-*   When the main view loads, the ViewController calls the
+*   When the ContentView calls task closure, the VonageVideoManager tries to connect and launch the
     `OTSession.initWithApiKey(_:, sessionId:,delegate:)` method to initialize
     a Session object. The app then calls the
     `OTSession.connectWithToken(_:, error:)` to connect to the session. The
@@ -57,12 +55,12 @@ Application Notes
     stream.
     
 *   Setup your video renderer in the `doPublish()` method, assign the `publisher.videoRender` property,
-    add proper subViews
+    add proper views
     
 
  To add a second publisher (which will display as a subscriber in your emulator), either run the app a second time in an iOS device or use the OpenTok Playground to connect to the session in a supported web browser (Chrome, Firefox, or Internet Explorer 10-11) by following the steps below:
 
-1. Go to [OpenTok Playground](https://tokbox.com/developer/tools/playground) (must be logged into your [Account](https://tokbox.com/account))
+1. Go to [Vonage Playground](https://tools.vonage.com/video/playground) (must be logged into your [Account](https://dashboard.vonage.com/))
 2. Select the **Join existing session** tab
 3. Copy the session ID you used in your project file and paste it in the **Session ID** input field
 4. Click **Join Session**
@@ -78,5 +76,5 @@ Configuration Notes
     the iOS Simulator, an OTPublisher object uses a demo video instead of the
     camera.
 
-[1]: https://tokbox.com/account/#/
-[2]: https://tokbox.com/developer/sdks/server/
+[1]: https://dashboard.vonage.com/
+[2]: https://developer.vonage.com/en/video/server-sdks/overview
