@@ -13,9 +13,6 @@ To use this application:
 2. When you run the application, it connects to a session and
    publishes an audio-video stream from your device to the session.
 
-Tutorial
------------
-
 ## Overview
 
 After initializing the `OTPublisher` object in the `VonageVideoManager`, we assign its `videoRender` property to an instance of our custom renderer `CustomVideoRender`.
