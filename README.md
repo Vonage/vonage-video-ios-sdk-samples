@@ -34,40 +34,13 @@ Quick Start
      let kToken = ""
      ```
  
- 1. Use Xcode to build and run the app on an iOS simulator or device.
+ 4. Use Xcode to build and run the app on an iOS simulator or device.
 
 What's Inside
 -------------
 
-**Basic Video Chat** -- This basic application demonstrates a short path to
-getting started with the OpenTok iOS SDK.
+**Basic Video Renderer** -- This project demonstrates how to use a **custom video renderer** in Swift to display a **black-and-white** version of a `OTPublisher` video stream using the **Vonage Video iOS SDK**
 
-**Custom Audio Driver** -- This project demonstrate how to use an external audio
-source with the OpenTok SDK. This project utilizes CoreAudio and the AUGraph API
-to create an audio session suitable for voice and video communications.
-
-**Custom Video Driver** -- This project provides classes that implement
-the OTVideoCapture and OTVideoRender interfaces of the core Publisher and
-Subscriber classes. Using these modules, we can see the basic workflow of
-sourcing video frames from the device camera in and out of OpenTok, via the
-OTPublisherKit and OTSubscriberKit interfaces.
-
-**Live Photo Capture** -- This project extends the video capture module implemented
-in project 2, and demonstrates how the AVFoundation media capture APIs can be used to
-simultaneously stream video and capture high-resolution photos from the same camera.
-
-**Screen Sharing** -- This project demonstrates how to use a custom video capturer
-to publish a stream that uses a UI view (instead of a camera) as the video source.
-
-**Simple Multiparty** -- This project demonstrates how to use the OpenTok iOS SDK
-for a multi-party call. The application publishes audio/video from an iOS device and 
-can connect to multiple subscribers. However it shows only one subscriber video at a 
-time due to CPU limitations on iOS devices.
-
-**Picture In Picture** -- This project demonstrates how to implement Picture In Picture on a 
-subcribed video stream.
-
-**FrameMetadata** -- This project shows how to set metadata (limited to 32 bytes) to a video frame, as well as how to read metadata from a video frame.
 	
 ## Obtaining Vonage Credentials
 
