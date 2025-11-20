@@ -69,14 +69,16 @@ subcribed video stream.
 
 **FrameMetadata** -- This project shows how to set metadata (limited to 32 bytes) to a video frame, as well as how to read metadata from a video frame.
 	
-## Obtaining OpenTok Credentials
+## Obtaining Vonage Credentials
 
-To use the OpenTok platform you need a session ID, token, and API key.
-You can get these values by creating a project on your [OpenTok Account
-Page](https://tokbox.com/account/) and scrolling down to the Project Tools
+[Step by step tutorial](https://developer.vonage.com/en/video/getting-started)
+
+To use the Vonage platform you need a session ID, token, and API key.
+You can get these values by creating a project on your [Vonage Account
+Page](https://developer.vonage.com/sign-in?redirect=/en/tools) and scrolling down to the Project Tools
 section of your Project page. For production deployment, you must generate the
-session ID and token values using one of the [OpenTok Server
-SDKs](https://tokbox.com/developer/sdks/server/).
+session ID and token values using one of the [Vonage Server
+SDKs](https://developer.vonage.com/en/video/server-sdks/overview).
 
 ## Development and Contributing
 
