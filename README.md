@@ -2,12 +2,12 @@ Vonage iOS SDK Samples
 =======================
 
 This repository is meant to provide some examples for you to better understand
-the features of the OpenTok iOS SDK. The sample applications are meant to be
+the features of the Vonage iOS SDK. The sample applications are meant to be
 used with the latest version of the
-[OpenTok iOS SDK](https://tokbox.com/developer/sdks/ios/). Feel free to copy and
+[Vonage iOS SDK](https://developer.vonage.com/en/video/client-sdks/ios/overview). Feel free to copy and
 modify the source code herein for your own projects. Please consider sharing
 your modifications with us, especially if they might benefit other developers
-using the OpenTok iOS SDK. See the [License](LICENSE) for more information.
+using the Vonage iOS SDK. See the [License](LICENSE) for more information.
 
 Quick Start
 -----------
