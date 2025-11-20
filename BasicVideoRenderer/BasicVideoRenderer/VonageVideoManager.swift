@@ -9,12 +9,16 @@ import OpenTok
 import SwiftUI
 
 final class VonageVideoManager: NSObject, ObservableObject {
+    
+    // *** Fill the following variables using your own Project info  ***
+    // *** https://developer.vonage.com/en/video/getting-started     ***
     // Replace with your Vonage application Id
     let kAppId = ""
     // Replace with your generated session Id
     let kSessionId = ""
     // Replace with your generated token
     let kToken = ""
+    
     let renderer = CustomVideoRender()
     
     private lazy var session: OTSession? = {

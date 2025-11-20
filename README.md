@@ -1,86 +1,57 @@
-[![Build Status](https://travis-ci.org/opentok/opentok-ios-sdk-samples-swift.svg?branch=main)](https://travis-ci.org/opentok/opentok-ios-sdk-samples-swift)
-
-OpenTok iOS SDK Samples
+Vonage iOS SDK Samples
 =======================
 
 This repository is meant to provide some examples for you to better understand
-the features of the OpenTok iOS SDK. The sample applications are meant to be
+the features of the Vonage iOS SDK. The sample applications are meant to be
 used with the latest version of the
-[OpenTok iOS SDK](https://tokbox.com/developer/sdks/ios/). Feel free to copy and
+[Vonage iOS SDK](https://developer.vonage.com/en/video/client-sdks/ios/overview). Feel free to copy and
 modify the source code herein for your own projects. Please consider sharing
 your modifications with us, especially if they might benefit other developers
-using the OpenTok iOS SDK. See the [License](LICENSE) for more information.
+using the Vonage iOS SDK. See the [License](LICENSE) for more information.
 
 Quick Start
 -----------
 
- 1. Get values for your OpenTok **API key**, **session ID**, and **token**.
-    See [Obtaining OpenTok Credentials](#obtaining-opentok-credentials)
+ 1. Get values for your Vonage **App ID**, **session ID**, and **token**.
+    See [Obtaining Vonage Credentials](#obtaining-vonage-credentials)
     for important information.
  
- 1. Install CocoaPods as described in [CocoaPods Getting Started](https://guides.cocoapods.org/using/getting-started.html#getting-started).
- 
- 1. In Terminal, `cd` to your project directory and type `pod install`.
- 
- 1. Reopen your project in Xcode using the new `.xcworkspace` file.
- 
- 1. In the ViewController.swift file, replace the following empty strings
+ 2. Add Vonage Client SDK Video iOS swift package by adding the https://github.com/vonage/vonage-video-client-sdk-swift.git repository as a Swift Package Dependency.
+
+    To add a package dependency to your Xcode project, select *File* > *Swift Packages* > *Add Package Dependency* and enter its repository URL.
+    
+ 3. In the VonageVideoManager.swift file, replace the following empty strings
     with the corresponding API key, session ID, and token values:
  
      ```swift
      // *** Fill the following variables using your own Project info  ***
-     // ***            https://tokbox.com/account/#/                  ***
-     // Replace with your OpenTok API key
-     let kApiKey = ""
-     // Replace with your generated session ID
+     // *** https://developer.vonage.com/en/video/getting-started     ***
+     // Replace with your Vonage application Id
+     let kAppId = ""
+     // Replace with your generated session Id
      let kSessionId = ""
      // Replace with your generated token
      let kToken = ""
      ```
  
- 1. Use Xcode to build and run the app on an iOS simulator or device.
+ 4. Use Xcode to build and run the app on an iOS simulator or device.
 
 What's Inside
 -------------
 
-**Basic Video Chat** -- This basic application demonstrates a short path to
-getting started with the OpenTok iOS SDK.
+**Basic Video Renderer** -- This project demonstrates how to use a **custom video renderer** in Swift to display a **black-and-white** version of a `OTPublisher` video stream using the **Vonage Video iOS SDK**
 
-**Custom Audio Driver** -- This project demonstrate how to use an external audio
-source with the OpenTok SDK. This project utilizes CoreAudio and the AUGraph API
-to create an audio session suitable for voice and video communications.
-
-**Custom Video Driver** -- This project provides classes that implement
-the OTVideoCapture and OTVideoRender interfaces of the core Publisher and
-Subscriber classes. Using these modules, we can see the basic workflow of
-sourcing video frames from the device camera in and out of OpenTok, via the
-OTPublisherKit and OTSubscriberKit interfaces.
-
-**Live Photo Capture** -- This project extends the video capture module implemented
-in project 2, and demonstrates how the AVFoundation media capture APIs can be used to
-simultaneously stream video and capture high-resolution photos from the same camera.
-
-**Screen Sharing** -- This project demonstrates how to use a custom video capturer
-to publish a stream that uses a UI view (instead of a camera) as the video source.
-
-**Simple Multiparty** -- This project demonstrates how to use the OpenTok iOS SDK
-for a multi-party call. The application publishes audio/video from an iOS device and 
-can connect to multiple subscribers. However it shows only one subscriber video at a 
-time due to CPU limitations on iOS devices.
-
-**Picture In Picture** -- This project demonstrates how to implement Picture In Picture on a 
-subcribed video stream.
-
-**FrameMetadata** -- This project shows how to set metadata (limited to 32 bytes) to a video frame, as well as how to read metadata from a video frame.
 	
-## Obtaining OpenTok Credentials
+## Obtaining Vonage Credentials
 
-To use the OpenTok platform you need a session ID, token, and API key.
-You can get these values by creating a project on your [OpenTok Account
-Page](https://tokbox.com/account/) and scrolling down to the Project Tools
+[Step by step tutorial](https://developer.vonage.com/en/video/getting-started)
+
+To use the Vonage platform you need a session ID, token, and API key.
+You can get these values by creating a project on your [Vonage Account
+Page](https://developer.vonage.com/sign-in?redirect=/en/tools) and scrolling down to the Project Tools
 section of your Project page. For production deployment, you must generate the
-session ID and token values using one of the [OpenTok Server
-SDKs](https://tokbox.com/developer/sdks/server/).
+session ID and token values using one of the [Vonage Server
+SDKs](https://developer.vonage.com/en/video/server-sdks/overview).
 
 ## Development and Contributing
 
@@ -92,10 +63,11 @@ Interested in contributing? We :heart: pull requests! See the
 We love to hear from you so if you have questions, comments or find a bug in the project, let us know! You can either:
 
 - Open an issue on this repository
-- See <https://support.tokbox.com/> for support options
+- See [Vonage support](https://api.support.vonage.com/) for support options
 - Tweet at us! We're [@VonageDev](https://twitter.com/VonageDev) on Twitter
 - Or [join the Vonage Developer Community Slack](https://developer.nexmo.com/community/slack)
 
 ## Further Reading
 
-- Check out the Developer Documentation at <https://tokbox.com/developer/>
+- Check out the [Developer Documentation](https://developer.vonage.com/)
+- [Vonage iOS SDK reference](https://vonage.github.io/video-docs/video-ios-reference/latest/)
