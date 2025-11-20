@@ -16,21 +16,19 @@ Quick Start
     See [Obtaining Vonage Credentials](#obtaining-vonage-credentials)
     for important information.
  
- 1. Install CocoaPods as described in [CocoaPods Getting Started](https://guides.cocoapods.org/using/getting-started.html#getting-started).
- 
- 1. In Terminal, `cd` to your project directory and type `pod install`.
- 
- 1. Reopen your project in Xcode using the new `.xcworkspace` file.
- 
- 1. In the ViewController.swift file, replace the following empty strings
+ 2. Add Vonage Client SDK Video iOS swift package by adding the https://github.com/vonage/vonage-video-client-sdk-swift.git repository as a Swift Package Dependency.
+
+    To add a package dependency to your Xcode project, select *File* > *Swift Packages* > *Add Package Dependency* and enter its repository URL.
+    
+ 3. In the VonageVideoManager.swift file, replace the following empty strings
     with the corresponding API key, session ID, and token values:
  
      ```swift
      // *** Fill the following variables using your own Project info  ***
-     // ***            https://tokbox.com/account/#/                  ***
-     // Replace with your OpenTok API key
-     let kApiKey = ""
-     // Replace with your generated session ID
+     // *** https://developer.vonage.com/en/video/getting-started     ***
+     // Replace with your Vonage application Id
+     let kAppId = ""
+     // Replace with your generated session Id
      let kSessionId = ""
      // Replace with your generated token
      let kToken = ""
