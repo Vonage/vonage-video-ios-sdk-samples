@@ -12,8 +12,8 @@ using the Vonage iOS SDK. See the [License](LICENSE) for more information.
 Quick Start
 -----------
 
- 1. Get values for your OpenTok **API key**, **session ID**, and **token**.
-    See [Obtaining OpenTok Credentials](#obtaining-opentok-credentials)
+ 1. Get values for your Vonage **App ID**, **session ID**, and **token**.
+    See [Obtaining Vonage Credentials](#obtaining-vonage-credentials)
     for important information.
  
  1. Install CocoaPods as described in [CocoaPods Getting Started](https://guides.cocoapods.org/using/getting-started.html#getting-started).
