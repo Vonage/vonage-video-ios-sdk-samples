@@ -1,0 +1,6 @@
+framework module Pods_Multiparty_UICollectionView {
+  umbrella header "Pods-Multiparty-UICollectionView-umbrella.h"
+
+  export *
+  module * { export * }
+}

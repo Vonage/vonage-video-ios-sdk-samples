@@ -1,0 +1,16 @@
+PODS:
+  - OTXCFramework (2.32.0-preview.2401)
+
+DEPENDENCIES:
+  - OTXCFramework (from `OTXCFramework.podspec`)
+
+EXTERNAL SOURCES:
+  OTXCFramework:
+    :podspec: OTXCFramework.podspec
+
+SPEC CHECKSUMS:
+  OTXCFramework: 0de9aa1962d4cdd3fac9a52277e389fed0f642cd
+
+PODFILE CHECKSUM: 97037909d7e29ba3a7d119459c90ed2b421ff2d6
+
+COCOAPODS: 1.16.2

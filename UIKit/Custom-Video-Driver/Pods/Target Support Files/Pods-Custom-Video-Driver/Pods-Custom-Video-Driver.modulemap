@@ -1,0 +1,6 @@
+framework module Pods_Custom_Video_Driver {
+  umbrella header "Pods-Custom-Video-Driver-umbrella.h"
+
+  export *
+  module * { export * }
+}

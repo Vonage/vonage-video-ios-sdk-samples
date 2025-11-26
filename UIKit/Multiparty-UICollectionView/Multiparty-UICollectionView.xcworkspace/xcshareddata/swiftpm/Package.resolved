@@ -1,0 +1,15 @@
+{
+  "originHash" : "20b24ebd67033deaa36fa7595830cca9e2eb39a0c3dcab70fdaf2f511668ae33",
+  "pins" : [
+    {
+      "identity" : "vonage-ml-transformers-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Vonage/vonage-ml-transformers-swift.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "5832d16df3bb55da1e128987f9a3e9c5badfd1e8"
+      }
+    }
+  ],
+  "version" : 3
+}
