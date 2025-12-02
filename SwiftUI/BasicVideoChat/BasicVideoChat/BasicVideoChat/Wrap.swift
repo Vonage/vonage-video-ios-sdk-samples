@@ -1,8 +1,8 @@
 //
 //  Wrap.swift
-//  testproj
+//  BasicVideoChat
 //
-//  Created by Artur Osiński on 31/10/2025.
+//  Created by Artur Osiński on 02/12/2025.
 //
 
 import UIKit
