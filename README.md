@@ -12,7 +12,7 @@ using the Vonage iOS SDK. See the [License](LICENSE) for more information.
 Table Of Contents
 -----------
 1. [Quick Start](#quick-start)
-2. [What's Inside](#what's-inside)
+2. [What's Inside](#whats-inside)
 3. [Obtaining Vonage Credentials](#obtaining-vonage-credentials)
 4. [Contributing](#development-and-contributing)
 5. [Help](#getting-help)
