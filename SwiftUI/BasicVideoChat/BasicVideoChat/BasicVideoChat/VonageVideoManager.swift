@@ -2,14 +2,6 @@
 //  VonageVideoManager.swift
 //  BasicVideoChat
 //
-//  Created by Artur Osiński on 02/12/2025.
-//
-
-
-//
-//  VonageVideoManager.swift
-//  testproj
-//
 //  Created by Artur Osiński on 31/10/2025.
 //
 
@@ -25,9 +17,7 @@ final class VonageVideoManager: NSObject, ObservableObject {
     // Replace with your generated token
     let kToken = ""
     
-    private lazy var session: OTSession? = {
-        OTSession(applicationId: kAppId, sessionId: kSessionId, delegate:self)
-    }()
+    private var session: OTSession?
     
     private lazy var publisher: OTPublisher? = {
         let settings = OTPublisherSettings()
@@ -37,33 +27,31 @@ final class VonageVideoManager: NSObject, ObservableObject {
     
     private var subscriber: OTSubscriber?
     
-    @Published var pubView: AnyView?
+    @Published var pubView: UIView?
     @Published var subView: UIView?
-//    @Published var error: OTErrorWrapper?
     
     public func setup() {
         doConnect()
     }
     
     private func doConnect() {
+        session = OTSession(applicationId: kAppId, sessionId: kSessionId, delegate: self)
+        if session == nil {
+            fatalError("Check your credentials and try again (kAppId, kSessionId, kToken)")
+        }
         var error: OTError?
         defer {
             processError(error)
         }
         session?.connect(withToken: kToken, error: &error)
     }
-    
-    private func doPublish() {
-        
-    }
-    
+
     private func doSubscribe(_ stream: OTStream) {
         var error: OTError?
         defer {
             if let error {
-                print(error)
+                processError(error)
             }
-            
         }
         subscriber = OTSubscriber(stream: stream, delegate: self)
         session?.subscribe(subscriber!, error: &error)
@@ -82,17 +70,12 @@ final class VonageVideoManager: NSObject, ObservableObject {
     }
     
     private func processError(_ error: OTError?) {
-        if let err = error {
-            DispatchQueue.main.async {
-                self.error = OTErrorWrapper(error: err.localizedDescription)
-            }
-        }
+        print("Got error \(String(describing: error))")
     }
 }
 
 extension VonageVideoManager: OTSessionDelegate {
-    
-    
+
     func sessionDidConnect(_ session: OTSession) {
         print("Session connected")
         var error: OTError?
@@ -107,7 +90,7 @@ extension VonageVideoManager: OTSessionDelegate {
         
         if let view = publisher.view {
             DispatchQueue.main.async {
-                self.pubView = AnyView(Wrap(view))
+                self.pubView = view
             }
         }
     }
@@ -153,6 +136,7 @@ extension VonageVideoManager: OTPublisherDelegate {
 extension VonageVideoManager: OTSubscriberDelegate {
     
     func subscriberDidConnect(toStream subscriberKit: OTSubscriberKit) {
+        print("The subscriber did connect to the stream.")
         if let view = subscriber?.view {
             DispatchQueue.main.async {
                 self.subView = view
