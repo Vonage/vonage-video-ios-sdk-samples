@@ -72,7 +72,7 @@ sourcing video frames from the device camera in and out of Vonage, via the
 simultaneously stream video and capture high-resolution photos from the same camera.
 
 **Screen Sharing** -- This project demonstrates how to use a custom video capturer
-to publish a stream that uses a UI view (instead of a camera) as the video source.
+to publish a stream that uses a `UIView` (instead of a camera) as the video source.
 
 **Simple Multiparty** -- This project demonstrates how to use the Vonage iOS SDK
 for a multi-party call. The application publishes audio/video from an iOS device and 
