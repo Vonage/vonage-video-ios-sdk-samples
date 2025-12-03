@@ -63,13 +63,12 @@ source with the Vonage SDK. This project utilizes CoreAudio and the AUGraph API
 to create an audio session suitable for voice and video communications.
 
 **Custom Video Driver** -- This project provides classes that implement
-the OTVideoCapture and OTVideoRender interfaces of the core Publisher and
+the `OTVideoCapture` and `OTVideoRender` interfaces of the core Publisher and
 Subscriber classes. Using these modules, we can see the basic workflow of
 sourcing video frames from the device camera in and out of Vonage, via the
-OTPublisherKit and OTSubscriberKit interfaces.
+`OTPublisherKit` and `OTSubscriberKit` interfaces.
 
-**Live Photo Capture** -- This project extends the video capture module implemented
-in project 2, and demonstrates how the AVFoundation media capture APIs can be used to
+**Live Photo Capture** -- This project demonstrates how the AVFoundation media capture APIs can be used to
 simultaneously stream video and capture high-resolution photos from the same camera.
 
 **Screen Sharing** -- This project demonstrates how to use a custom video capturer
