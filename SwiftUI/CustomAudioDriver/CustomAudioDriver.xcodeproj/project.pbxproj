@@ -11,13 +11,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BBE125572EBFAFDA009A7817 /* BasicVideoRenderer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicVideoRenderer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBE125572EBFAFDA009A7817 /* CustomAudioDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomAudioDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		BBE125592EBFAFDA009A7817 /* BasicVideoRenderer */ = {
+		BBE125592EBFAFDA009A7817 /* CustomAudioDriver */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BasicVideoRenderer;
+			path = CustomAudioDriver;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -37,7 +37,7 @@
 		BBE1254E2EBFAFDA009A7817 = {
 			isa = PBXGroup;
 			children = (
-				BBE125592EBFAFDA009A7817 /* BasicVideoRenderer */,
+				BBE125592EBFAFDA009A7817 /* CustomAudioDriver */,
 				BBE125582EBFAFDA009A7817 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,7 +45,7 @@
 		BBE125582EBFAFDA009A7817 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BBE125572EBFAFDA009A7817 /* BasicVideoRenderer.app */,
+				BBE125572EBFAFDA009A7817 /* CustomAudioDriver.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,9 +53,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BBE125562EBFAFDA009A7817 /* BasicVideoRenderer */ = {
+		BBE125562EBFAFDA009A7817 /* CustomAudioDriver */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BBE125622EBFAFDD009A7817 /* Build configuration list for PBXNativeTarget "BasicVideoRenderer" */;
+			buildConfigurationList = BBE125622EBFAFDD009A7817 /* Build configuration list for PBXNativeTarget "CustomAudioDriver" */;
 			buildPhases = (
 				BBE125532EBFAFDA009A7817 /* Sources */,
 				BBE125542EBFAFDA009A7817 /* Frameworks */,
@@ -66,14 +66,14 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				BBE125592EBFAFDA009A7817 /* BasicVideoRenderer */,
+				BBE125592EBFAFDA009A7817 /* CustomAudioDriver */,
 			);
-			name = BasicVideoRenderer;
+			name = CustomAudioDriver;
 			packageProductDependencies = (
 				BBE1256E2EBFB206009A7817 /* VonageClientSDKVideo */,
 			);
-			productName = BasicVideoRenderer;
-			productReference = BBE125572EBFAFDA009A7817 /* BasicVideoRenderer.app */;
+			productName = CustomAudioDriver;
+			productReference = BBE125572EBFAFDA009A7817 /* CustomAudioDriver.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -91,7 +91,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BBE125522EBFAFDA009A7817 /* Build configuration list for PBXProject "BasicVideoRenderer" */;
+			buildConfigurationList = BBE125522EBFAFDA009A7817 /* Build configuration list for PBXProject "CustomAudioDriver" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -108,7 +108,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BBE125562EBFAFDA009A7817 /* BasicVideoRenderer */,
+				BBE125562EBFAFDA009A7817 /* CustomAudioDriver */,
 			);
 		};
 /* End PBXProject section */
@@ -260,9 +260,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PR6C39UQ38;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -275,8 +275,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vonage.BasicVideoRenderer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vonage.CustomAudioDriver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -288,9 +289,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PR6C39UQ38;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -303,8 +304,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vonage.BasicVideoRenderer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vonage.CustomAudioDriver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -314,7 +316,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BBE125522EBFAFDA009A7817 /* Build configuration list for PBXProject "BasicVideoRenderer" */ = {
+		BBE125522EBFAFDA009A7817 /* Build configuration list for PBXProject "CustomAudioDriver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BBE125602EBFAFDD009A7817 /* Debug */,
@@ -323,7 +325,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BBE125622EBFAFDD009A7817 /* Build configuration list for PBXNativeTarget "BasicVideoRenderer" */ = {
+		BBE125622EBFAFDD009A7817 /* Build configuration list for PBXNativeTarget "CustomAudioDriver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BBE125632EBFAFDD009A7817 /* Debug */,
