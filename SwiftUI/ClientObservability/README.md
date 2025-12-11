@@ -54,10 +54,10 @@ extension VonageVideoManager: OTSubscriberKitNetworkStatsDelegate {
 ```
 
 ### Step 4: Enable Publisher Stats
-Set the `networkStatsDelegate` on each subscriber to receive callbacks with statistics:
+Set the `networkStatsDelegate` on the publisher to receive callbacks with statistics:
 
 ```swift
-publisger.networkStatsDelegate = self
+publisher.networkStatsDelegate = self
 ```
 ### Step 5: Conform to `OTPublisherKitNetworkStatsDelegate`
 Add conformance to this protocol to read stats when the callbacks get triggered:

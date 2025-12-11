@@ -1,6 +1,6 @@
 //
 //  VonageVideoManager.swift
-//  BasicVideoChat
+//  ClientObservability
 //
 
 import OpenTok
@@ -172,7 +172,7 @@ extension VonageVideoManager: OTPublisherKitNetworkStatsDelegate {
 
         for (index, stats) in statsArray.enumerated() {
             let line = """
-            [Video Stat \(index)]
+            [Video Stats \(index)]
             connectionId: \(stats.connectionId)
             subscriberId: \(stats.subscriberId)
             videoPacketsSent: \(stats.videoPacketsSent)
@@ -197,7 +197,7 @@ extension VonageVideoManager: OTPublisherKitNetworkStatsDelegate {
 
         for (index, stats) in statsArray.enumerated() {
             let line = """
-            [Audio Stat \(index)]
+            [Audio Stats \(index)]
             connectionId: \(stats.connectionId)
             subscriberId: \(stats.subscriberId)
             audioPacketsSent: \(stats.audioPacketsSent)

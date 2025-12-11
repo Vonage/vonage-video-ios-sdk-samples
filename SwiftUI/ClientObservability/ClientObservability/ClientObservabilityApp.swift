@@ -1,12 +1,12 @@
 //
-//  BasicVideoChatApp.swift
-//  BasicVideoChat
+//  ClientObservabilityApp.swift
+//  ClientObservability
 //
 
 import SwiftUI
 
 @main
-struct BasicVideoChatApp: App {
+struct ClientObservabilityApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
