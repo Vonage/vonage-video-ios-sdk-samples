@@ -6,14 +6,16 @@ The Vonage Video SDK provides calls to access real-time network and media statis
 
 ### Key Features Implemented
 
-1.  **Multi-subscriber support**  
-    The app tracks each subscriber individually using a dictionary keyed by  `streamId`. Multiple subscriber views and their corresponding stats are maintained separately.
-
-2.  **Subscriber stats (including sender stats) monitoring**  
-    Subscriber stats are updated in real-time as network stats change. Each subscriber maintains separate  `video`  and  `audio`  metrics. The  `OTSenderStats`  object provides information about the outgoing connection from the publisher’s perspective.
+1. **Multi-subscriber support**  
+   The app tracks each subscriber individually using a dictionary keyed by  `streamId`. Multiple subscriber views and their corresponding stats are maintained separately.
+2. **Subscriber stats (including sender stats) monitoring**  
+   Subscriber stats are updated in real-time as network stats change. Each subscriber maintains separate  `video`  and  `audio`  metrics. The  `OTSenderStats`  object provides information about the outgoing connection from the publisher’s perspective.
 3. **Publisher stats monitoring**  
-    Similar to subscribers, publisher stats are collected via  `OTPublisherKitNetworkStatsDelegate`  callbacks and displayed in real-time.
+   Similar to subscribers, publisher stats are collected via  `OTPublisherKitNetworkStatsDelegate`  callbacks and displayed in real-time.
     
+## Prerequisites
+
+You need to set values for the `kAppId`, `kSessionId` and `kToken` constants. Follow the [Getting started](https://developer.vonage.com/en/video/getting-started) guide to learn how to obtain these credentials.
 
 ## Setting up the statistics
 
@@ -61,8 +63,6 @@ publisher.networkStatsDelegate = self
 ```
 ### Step 5: Conform to `OTPublisherKitNetworkStatsDelegate`
 Add conformance to this protocol to read stats when the callbacks get triggered:
-
-swift
 
 ```swift
 extension VonageVideoManager: OTPublisherKitNetworkStatsDelegate {
