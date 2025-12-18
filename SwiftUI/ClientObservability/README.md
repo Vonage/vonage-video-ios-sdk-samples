@@ -1,6 +1,6 @@
 ﻿# Client Observability Sample App
 
-This application, built on top of Basic Video Chat, shows how to  [retrieve statistics](https://tokbox.com/developer/guides/client-observability/)  from both publishers and multiple subscribers, including sender-side statistics.
+This application, built on top of Basic Video Chat, shows how to [retrieve statistics](https://tokbox.com/developer/guides/client-observability/) from both publishers and multiple subscribers, including sender-side statistics.
 
 The Vonage Video SDK provides calls to access real-time network and media statistics in a video session. These calls report detailed stream quality metrics—such as packet loss, data received, and bandwidth—and can be used on any publisher or subscribed stream.
 
