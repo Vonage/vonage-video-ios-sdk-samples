@@ -72,7 +72,7 @@
 			packageProductDependencies = (
 				BB0F2D972EDE6F180047AF16 /* VonageClientSDKVideo */,
 			);
-			productName = BasicVideoChat;
+			productName = ClientObservability;
 			productReference = BB0F2D862EDE6C5E0047AF16 /* ClientObservability.app */;
 			productType = "com.apple.product-type.application";
 		};
