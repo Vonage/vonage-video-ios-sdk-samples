@@ -20,6 +20,7 @@ final class VonageVideoManager: NSObject, ObservableObject {
     private lazy var publisher: OTPublisher? = {
         let settings = OTPublisherSettings()
         settings.name = UIDevice.current.name
+        // Enable sender stats so subscribers can access publisher-side metrics
         settings.senderStatsTrack = true
         let publisher = OTPublisher(delegate: self, settings: settings)
         publisher?.networkStatsDelegate = self
