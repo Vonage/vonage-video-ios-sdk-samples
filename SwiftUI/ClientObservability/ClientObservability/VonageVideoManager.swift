@@ -31,6 +31,10 @@ final class VonageVideoManager: NSObject, ObservableObject {
     @Published var subscriberViews: [String: UIView] = [:]
     @Published var pubView: UIView?
     
+    // Statistics storage: [streamId: [mediaType: [formatted stats lines]]]
+    // - First key: publisher/subscriber stream ID
+    // - Second key: "video" or "audio"
+    // - Value: array of formatted statistic strings for display
     @Published var publisherStats: [String: [String: [String]]] = [:]
     @Published var subscriberStats: [String: [String: [String]]] = [:]
     
