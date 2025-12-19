@@ -44,7 +44,6 @@ Table Of Contents
  
  4. Use Xcode to build and run the app on an iOS simulator or device.
 
-
 # What's Inside
 
 You can find various sample apps written in `SwiftUI` & `UIKit` that demonstrate the Vonage iOS SDK features:
