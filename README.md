@@ -54,6 +54,8 @@ getting started with the Vonage iOS SDK.
 
 **Basic Video Renderer** -- This project demonstrates how to use a **custom video renderer** in Swift to display a **black-and-white** version of a `OTPublisher` video stream using the **Vonage Video iOS SDK**
 
+**Basic Video Capturer** -- This project demonstrates how to make modifications to the **video capturer** in your Vonage application. The app uses a custom video capturer to publish random pixels (white noise).
+
 **Client Observability** -- This application demonstrates how to access publisher and subscriber observability features, including sender-side statistics.
 
 ## UIKit

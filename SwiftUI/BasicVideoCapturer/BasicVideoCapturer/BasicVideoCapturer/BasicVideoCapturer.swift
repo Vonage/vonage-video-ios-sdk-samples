@@ -44,6 +44,11 @@ class BasicVideoCapturer: NSObject, OTVideoCapture {
         self.videoFormat = nil
     }
     
+    //
+    //  returns:
+    //  - a negative value for error
+    //  - 0 value when all is OK
+    //
     func start() -> Int32 {
         self.captureStarted = true
         
@@ -55,6 +60,11 @@ class BasicVideoCapturer: NSObject, OTVideoCapture {
         return 0
     }
     
+    //
+    //  returns:
+    //  - a negative value for error
+    //  - 0 value when all is OK
+    //
     func stop() -> Int32 {
         self.captureStarted = false
         return 0
