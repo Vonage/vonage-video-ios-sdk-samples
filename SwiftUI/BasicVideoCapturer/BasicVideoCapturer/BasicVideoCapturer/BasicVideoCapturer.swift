@@ -11,9 +11,9 @@ import OpenTok
 class BasicVideoCapturer: NSObject, OTVideoCapture {
     
     // MARK: - Constants
-    private let kFramesPerSecond: Double = 15.0
-    private let kImageWidth: UInt32 = 320
-    private let kImageHeight: UInt32 = 240
+    private let framesPerSecond: Double = 15.0
+    private let imageWidth: UInt32 = 320
+    private let imageHeight: UInt32 = 240
     
     // MARK: - Properties
     
@@ -26,16 +26,16 @@ class BasicVideoCapturer: NSObject, OTVideoCapture {
     
     /// Helper to calculate the next frame deadline
     private var timerInterval: DispatchTime {
-        return DispatchTime.now() + Double(1.0 / kFramesPerSecond)
+        return DispatchTime.now() + Double(1.0 / framesPerSecond)
     }
     
     // MARK: - OTVideoCapture Protocol
     func initCapture() {
         let format = OTVideoFormat()
         format.pixelFormat = .ARGB
-        format.bytesPerRow = [NSNumber(value: kImageWidth * 4)]
-        format.imageHeight = kImageHeight
-        format.imageWidth = kImageWidth
+        format.bytesPerRow = [NSNumber(value: imageWidth * 4)]
+        format.imageHeight = imageHeight
+        format.imageWidth = imageWidth
         
         self.videoFormat = format
     }
@@ -88,7 +88,7 @@ class BasicVideoCapturer: NSObject, OTVideoCapture {
         let frame = OTVideoFrame(format: format)
         
         // 2. Allocate memory for the image buffer (Width * Height * 4 bytes for ARGB)
-        let bufferSize = Int(kImageWidth * kImageHeight * 4)
+        let bufferSize = Int(imageWidth * imageHeight * 4)
         let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: bufferSize)
         
         // 3. Fill buffer with random noise
