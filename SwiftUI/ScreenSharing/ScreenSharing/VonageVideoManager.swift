@@ -116,8 +116,7 @@ extension VonageVideoManager: OTSessionDelegate {
                 self.pubView = view
             }
         }
-        publisher.videoCapture = BasicVideoCapturer()
-//        publisher.videoCapture = BasicVideoCapturerCamera(preset: .cif352x288, desiredFrameRate: 30)
+        
     }
     
     func sessionDidDisconnect(_ session: OTSession) {
