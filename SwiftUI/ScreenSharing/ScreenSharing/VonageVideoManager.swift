@@ -100,6 +100,15 @@ extension VonageVideoManager: OTSessionDelegate {
         guard let publisher else {
             return
         }
+        publisher.videoType = .screen
+        publisher.audioFallbackEnabled = false
+        guard let fullScreenView = UIApplication.shared.rootViewController?.view else {
+            fatalError("rootViewController is nil, please check your view structure, or use custom ViewRepresentable object")
+        }
+        capturer = ScreenCapturer(withView: fullScreenView)
+        publisher.videoCapture = capturer
+        publisher.videoCapture?.videoContentHint = .text
+        
         session.publish(publisher, error: &error)
         
         if let view = publisher.view {
