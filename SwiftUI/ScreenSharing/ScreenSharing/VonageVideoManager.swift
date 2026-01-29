@@ -27,11 +27,24 @@ final class VonageVideoManager: NSObject, ObservableObject {
     }()
     
     private var subscriber: OTSubscriber?
+    private var capturer: ScreenCapturer?
     
     @Published var pubView: UIView?
     @Published var subView: UIView?
+    @Published var timeStamp: String = "00:00:00.00"
+    
+    fileprivate let formatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .long
+        return dateFormatter
+    }()
     
     public func setup() {
+        Timer.scheduledTimer(withTimeInterval: TimeInterval(1), repeats: true) { [weak self] _ in
+            guard let self else { return }
+            self.timeStamp = self.formatter.string(from: Date())
+        }
         doConnect()
     }
     
