@@ -13,20 +13,9 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text(videoManager.timeStamp)
-            Wrap(videoManager.screensharingView)
+                .background(.red)
                 .frame(width: 200, height: 200, alignment: .center)
                 .cornerRadius(5.0)
-            
-//            videoManager.pubView.map { view in
-//                Wrap(view)
-//                    .frame(width: 200, height: 200, alignment: .center)
-//                    .cornerRadius(5.0)
-//            }
-//            videoManager.subView.map { view in
-//                Wrap(view)
-//                    .frame(width: 200, height: 200, alignment: .center)
-//                    .cornerRadius(5.0)
-//            }
         }
         .task {
             videoManager.setup()
