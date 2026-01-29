@@ -1,10 +1,9 @@
 //
 //  ScreenCapturer.swift
-//  BasicVideoCapturer
+//  ScreenSharing
 //
 //  Created by Artur Osiński on 28/01/2026.
 //
-
 
 import Foundation
 import OpenTok
@@ -77,7 +76,6 @@ class ScreenCapturer: NSObject, OTVideoCapture {
         CVPixelBufferLockBaseAddress(ref, CVPixelBufferLockFlags(rawValue: 0))
         
         videoFrame.timestamp = time
-        //videoFrame?.format.estimatedFramesPerSecond =
         videoFrame.format?.estimatedCaptureDelay = 100
         videoFrame.orientation = .up
         
