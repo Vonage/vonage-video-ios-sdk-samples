@@ -106,12 +106,22 @@ class BasicVideoCapturerCamera: NSObject, OTVideoCapture, AVCaptureVideoDataOutp
         self.inputDevice = nil
     }
     
+    //
+    //  returns:
+    //  - a negative value for error
+    //  - 0 value when all is OK
+    //
     func start() -> Int32 {
         self.captureStarted = true
         self.captureSession?.startRunning()
         return 0
     }
     
+    //
+    //  returns:
+    //  - a negative value for error
+    //  - 0 value when all is OK
+    //
     func stop() -> Int32 {
         self.captureStarted = false
         self.captureSession?.stopRunning()
@@ -122,6 +132,11 @@ class BasicVideoCapturerCamera: NSObject, OTVideoCapture, AVCaptureVideoDataOutp
         return self.captureStarted
     }
     
+    //
+    //  returns:
+    //  - a negative value for error
+    //  - 0 value when all is OK
+    //
     func captureSettings(_ videoFormat: OTVideoFormat) -> Int32 {
         videoFormat.pixelFormat = .NV12
         videoFormat.imageWidth = UInt32(self.imageWidth)
