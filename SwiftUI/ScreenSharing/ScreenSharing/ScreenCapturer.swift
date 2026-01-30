@@ -39,13 +39,19 @@ class ScreenCapturer: NSObject, OTVideoCapture {
     fileprivate func screenShoot() -> UIImage {
         UIGraphicsBeginImageContextWithOptions(captureView.bounds.size, false, 0.0)
         captureView.drawHierarchy(in: captureView.bounds, afterScreenUpdates: false)
+        
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return image!
+        guard let image else {
+            fatalError("UIGraphics image from current context missing")
+        }
+        return image
     }
     
     fileprivate func resizeAndPad(image img: UIImage) -> CGImage {
-        let source = img.cgImage!
+        guard let source = img.cgImage else {
+            fatalError("UIImage has no CGImage backing")
+        }
         let size = CGSize(width: source.width, height: source.height)
         let destSizes = dimensions(forInputSize: size)
         
@@ -59,15 +65,17 @@ class ScreenCapturer: NSObject, OTVideoCapture {
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return (newImage?.cgImage)!
+        guard let processedImage = newImage?.cgImage else {
+            fatalError("UIImage has no CGImage backing")
+        }
+        return processedImage
     }
     
     fileprivate func consume(frame: CGImage) {
-        checkSize(forImage: frame)
-        
-        if !capturing {
+        guard capturing  else {
             return
         }
+        checkSize(forImage: frame)
         
         let timeStamp = mach_absolute_time()
         let time = CMTime(seconds: Double(timeStamp), preferredTimescale: 1000)
@@ -129,7 +137,7 @@ class ScreenCapturer: NSObject, OTVideoCapture {
     }
 
     func timerResume() {
-        if timerState == .resumed {
+        guard timerState != .resumed else {
             return
         }
         timerState = .resumed
@@ -137,7 +145,7 @@ class ScreenCapturer: NSObject, OTVideoCapture {
     }
     
     func timerSuspend() {
-        if timerState == .suspended {
+        guard timerState != .suspended else {
             return
         }
         timerState = .suspended
@@ -155,8 +163,11 @@ class ScreenCapturer: NSObject, OTVideoCapture {
 extension ScreenCapturer {
     fileprivate func pixelBuffer(fromCGImage img: CGImage) -> CVPixelBuffer {
         let frameSize = CGSize(width: img.width, height: img.height)
-        CVPixelBufferLockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: CVOptionFlags(0)))
-        let pxdata = CVPixelBufferGetBaseAddress(pixelBuffer!)
+        guard let pixelBuffer else {
+            fatalError("pixelBuffer not initialised")
+        }
+        CVPixelBufferLockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue: CVOptionFlags(0)))
+        let pxdata = CVPixelBufferGetBaseAddress(pixelBuffer)
         
         let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
         let context =
@@ -164,16 +175,16 @@ extension ScreenCapturer {
                       width: Int(frameSize.width),
                       height: Int(frameSize.height),
                       bitsPerComponent: 8,
-                      bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer!),
+                      bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer),
                       space: rgbColorSpace,
                       bitmapInfo: CGImageAlphaInfo.premultipliedFirst.rawValue | CGBitmapInfo.byteOrder32Little.rawValue)
         
         
         context?.draw(img, in: CGRect(x: 0, y: 0, width: img.width, height: img.height))
         
-        CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: CVOptionFlags(0)))
+        CVPixelBufferUnlockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue: CVOptionFlags(0)))
         
-        return pixelBuffer!;
+        return pixelBuffer
     }
     
     fileprivate func dimensions(forInputSize size: CGSize) -> (container: CGSize, rect: CGRect) {
@@ -197,48 +208,48 @@ extension ScreenCapturer {
         // ensure the dimensions of the resulting container are safe
         if (fmod(destContainer.width, EDGE_DIMENSION_COMMON_FACTOR) != 0) {
             let remainder = fmod(destContainer.width,
-                                 EDGE_DIMENSION_COMMON_FACTOR);
+                                 EDGE_DIMENSION_COMMON_FACTOR)
             // increase the edge size only if doing so does not break the edge limit
             if (destContainer.width + (EDGE_DIMENSION_COMMON_FACTOR - remainder) >
                 MAX_EDGE_SIZE_LIMIT)
             {
-                destContainer.width -= remainder;
+                destContainer.width -= remainder
             } else {
-                destContainer.width += EDGE_DIMENSION_COMMON_FACTOR - remainder;
+                destContainer.width += EDGE_DIMENSION_COMMON_FACTOR - remainder
             }
         }
         // ensure the dimensions of the resulting container are safe
         if (fmod(destContainer.height, EDGE_DIMENSION_COMMON_FACTOR) != 0) {
             let remainder = fmod(destContainer.height,
-                                 EDGE_DIMENSION_COMMON_FACTOR);
+                                 EDGE_DIMENSION_COMMON_FACTOR)
             // increase the edge size only if doing so does not break the edge limit
             if (destContainer.height + (EDGE_DIMENSION_COMMON_FACTOR - remainder) >
                 MAX_EDGE_SIZE_LIMIT)
             {
-                destContainer.height -= remainder;
+                destContainer.height -= remainder
             } else {
-                destContainer.height += EDGE_DIMENSION_COMMON_FACTOR - remainder;
+                destContainer.height += EDGE_DIMENSION_COMMON_FACTOR - remainder
             }
         }
         
-        destFrame.size.width = destContainer.width;
-        destFrame.size.height = destContainer.height;
+        destFrame.size.width = destContainer.width
+        destFrame.size.height = destContainer.height
         
         // scale and recenter source image to fit in destination container
         if (aspect > 1.0) {
-            destFrame.origin.x = 0;
+            destFrame.origin.x = 0
             destFrame.origin.y =
-                (destContainer.height - destContainer.width) / 2;
-            destFrame.size.width = destContainer.width;
+                (destContainer.height - destContainer.width) / 2
+            destFrame.size.width = destContainer.width
             destFrame.size.height =
-                destContainer.width / aspect;
+                destContainer.width / aspect
         } else {
             destFrame.origin.x =
-                (destContainer.width - destContainer.width) / 2;
-            destFrame.origin.y = 0;
-            destFrame.size.height = destContainer.height;
+                (destContainer.width - destContainer.width) / 2
+            destFrame.origin.y = 0
+            destFrame.size.height = destContainer.height
             destFrame.size.width =
-                destContainer.height * aspect;
+                destContainer.height * aspect
         }
         
         return (destContainer, destFrame)
