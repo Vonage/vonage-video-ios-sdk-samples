@@ -77,7 +77,6 @@ class ScreenCapturer: NSObject, OTVideoCapture {
         CVPixelBufferLockBaseAddress(ref, CVPixelBufferLockFlags(rawValue: 0))
         
         videoFrame.timestamp = time
-        //videoFrame?.format.estimatedFramesPerSecond =
         videoFrame.format?.estimatedCaptureDelay = 100
         videoFrame.orientation = .up
         
