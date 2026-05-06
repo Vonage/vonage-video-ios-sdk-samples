@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slack-like Chat</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<!-- ── Login overlay ─────────────────────────────────────────── -->
+<div id="login-overlay">
+  <div id="login-box">
+    <div class="logo">von<span>age</span>chat</div>
+    <p>Real-time team messaging, locally hosted</p>
+    <input id="username-input" type="text" placeholder="Your display name" maxlength="32" autofocus />
+    <button id="login-btn">Start chatting</button>
+  </div>
+</div>
+
+<!-- ── App shell ─────────────────────────────────────────────── -->
+<div id="app" class="hidden">
+
+  <!-- ── Sidebar ────────────────────────────────────────────── -->
+  <nav id="sidebar">
+
+    <div id="workspace-header">
+      <div id="workspace-name">vonagechat</div>
+      <div id="user-status-line">
+        <div id="user-status-dot"></div>
+        <span id="user-display-name">…</span>
+        <span style="font-size:10px;opacity:.6;margin-left:auto">▾</span>
+      </div>
+    </div>
+
+    <div id="sidebar-scroll">
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          Channels
+        </div>
+        <div id="channel-list"></div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">
+          Direct Messages
+        </div>
+        <div id="dm-list"></div>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ── Main ───────────────────────────────────────────────── -->
+  <section id="main">
+
+    <header id="channel-header">
+      <h2 id="channel-title"># general</h2>
+      <span id="channel-desc"></span>
+      <span id="member-count"></span>
+    </header>
+
+    <div id="messages"></div>
+
+    <div id="typing-bar"></div>
+
+    <div id="input-area" style="position:relative">
+      <div id="emoji-picker"></div>
+      <div id="input-box">
+        <button id="emoji-btn" title="Emoji">😊</button>
+        <textarea
+          id="message-input"
+          placeholder="Message #general"
+          rows="1"
+        ></textarea>
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── Right panel ────────────────────────────────────────── -->
+  <aside id="right-panel">
+    <h3>Members</h3>
+    <div id="member-list"></div>
+  </aside>
+
+</div>
+
+<!-- ── Toast container ───────────────────────────────────────── -->
+<div id="toast-container"></div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/app.js"></script>
+<script>
+  // Show app shell after login
+  document.getElementById('login-btn').addEventListener('click', () => {
+    const name = document.getElementById('username-input').value.trim();
+    if (name) document.getElementById('app').classList.remove('hidden');
+  });
+  document.getElementById('username-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      const name = e.target.value.trim();
+      if (name) document.getElementById('app').classList.remove('hidden');
+    }
+  });
+
+</script>
+</body>
+</html>
