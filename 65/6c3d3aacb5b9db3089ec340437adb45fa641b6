@@ -1,0 +1,29 @@
+SwiftUI/SimpleMultiparty/SimpleMultiparty.xcodeproj/project.pbxproj
+  s_03740e67610e4c::t_fb07fd10f32bb7 265-299
+SwiftUI/SimpleMultiparty/SimpleMultiparty/Assets.xcassets/Subscriber-Speaker-35.imageset/Contents.json
+  s_03740e67610e4c::t_36c5ae450f88a5 1-22
+SwiftUI/SimpleMultiparty/SimpleMultiparty/ContentView.swift
+  s_03740e67610e4c::t_810748c9420760 11-138
+SwiftUI/SimpleMultiparty/SimpleMultiparty/Wrap.swift
+  s_03740e67610e4c::t_d59ea30f241c9a 1-21
+"SwiftUI/SimpleMultiparty/SimpleMultiparty/Assets.xcassets/TB Bug-30.imageset/Contents.json"
+  s_03740e67610e4c::t_36c5ae450f88a5 1-22
+SwiftUI/SimpleMultiparty/SimpleMultiparty/Assets.xcassets/Subscriber-Speaker-Mute-35.imageset/Contents.json
+  s_03740e67610e4c::t_36c5ae450f88a5 1-22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "656c3d3aacb5b9db3089ec340437adb45fa641b6",
+  "prompts": {},
+  "sessions": {
+    "s_03740e67610e4c": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "31316fc0-27d4-4afd-948b-019a52feeaa4",
+        "model": "default"
+      },
+      "human_author": "aos-svg <artur.osinski@vonage.com>"
+    }
+  }
+}
