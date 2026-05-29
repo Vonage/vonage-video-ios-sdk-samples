@@ -1,0 +1,23 @@
+SwiftUI/SimpleMultiparty/SimpleMultiparty/Assets.xcassets/mic_muted-24.imageset/Contents.json
+  s_03740e67610e4c::t_36c5ae450f88a5 1-22
+SwiftUI/SimpleMultiparty/SimpleMultiparty/Assets.xcassets/camera_switch-33.imageset/Contents.json
+  s_03740e67610e4c::t_36c5ae450f88a5 1-22
+SwiftUI/SimpleMultiparty/SimpleMultiparty/Assets.xcassets/mic-24.imageset/Contents.json
+  s_03740e67610e4c::t_36c5ae450f88a5 1-22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "8fde2f2b334184e6a1967ffb68ef70dbc294f1cd",
+  "prompts": {},
+  "sessions": {
+    "s_03740e67610e4c": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "31316fc0-27d4-4afd-948b-019a52feeaa4",
+        "model": "default"
+      },
+      "human_author": "aos-svg <artur.osinski@vonage.com>"
+    }
+  }
+}
