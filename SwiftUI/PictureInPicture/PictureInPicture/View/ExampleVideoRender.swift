@@ -3,7 +3,6 @@ import GLKit
 import Foundation
 import UIKit
 
-
 protocol ExampleVideoRenderDelegate {
     func renderer(_ renderer: ExampleVideoRender, didReceiveFrame videoFrame: OTVideoFrame)
 }

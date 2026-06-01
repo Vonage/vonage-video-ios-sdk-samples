@@ -2,6 +2,17 @@ import SwiftUI
 import UIKit
 import AVFoundation
 
+final class VideoContainerView: UIView {
+    var onEnterWindow: (() -> Void)?
+
+    override func didMoveToWindow() {
+        super.didMoveToWindow()
+        if window != nil {
+            onEnterWindow?()
+        }
+    }
+}
+
 struct SubscriberVideoView: UIViewRepresentable {
     @ObservedObject var manager: VonageVideoManager
     let size: CGSize
@@ -10,16 +21,23 @@ struct SubscriberVideoView: UIViewRepresentable {
         Coordinator()
     }
 
-    func makeUIView(context: Context) -> UIView {
-        let containerView = UIView()
+    func makeUIView(context: Context) -> VideoContainerView {
+        let containerView = VideoContainerView()
         containerView.backgroundColor = .black
-        context.coordinator.containerView = containerView
+        let coordinator = context.coordinator
+        containerView.onEnterWindow = { [weak containerView] in
+            guard let containerView else { return }
+            coordinator.configurePictureInPictureIfNeeded(for: containerView)
+        }
         return containerView
     }
 
-    func updateUIView(_ uiView: UIView, context: Context) {
-        let displayLayer = manager.videoRender.bufferDisplayLayer
+    func updateUIView(_ uiView: VideoContainerView, context: Context) {
+        context.coordinator.manager = manager
+        context.coordinator.videoSize = size
+
         let frame = CGRect(origin: .zero, size: size)
+        let displayLayer = manager.videoRender.bufferDisplayLayer
 
         if displayLayer.superlayer !== uiView.layer {
             displayLayer.removeFromSuperlayer()
@@ -30,13 +48,22 @@ struct SubscriberVideoView: UIViewRepresentable {
             displayLayer.frame = frame
         }
 
-        guard !context.coordinator.didConfigurePictureInPicture else { return }
-        context.coordinator.didConfigurePictureInPicture = true
-        manager.configurePictureInPicture(with: uiView, videoFrame: frame)
+        context.coordinator.configurePictureInPictureIfNeeded(for: uiView)
     }
 
     final class Coordinator {
-        var containerView: UIView?
+        weak var manager: VonageVideoManager?
+        var videoSize: CGSize = .zero
         var didConfigurePictureInPicture = false
+
+        func configurePictureInPictureIfNeeded(for view: UIView) {
+            guard !didConfigurePictureInPicture,
+                  let manager,
+                  view.window != nil else { return }
+
+            didConfigurePictureInPicture = true
+            let frame = CGRect(origin: .zero, size: videoSize)
+            manager.configurePictureInPicture(with: view, videoFrame: frame)
+        }
     }
 }
