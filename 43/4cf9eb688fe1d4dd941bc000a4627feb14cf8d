@@ -1,0 +1,22 @@
+SwiftUI/PictureInPicture/PictureInPicture/VonageVideoManager.swift
+  s_ac5a7d6179104f::t_8a4a8911e7b40f 63-64,66,68-71
+  s_ac5a7d6179104f::t_ea5f75db5119de 157-159
+  s_ac5a7d6179104f::t_23f309da5dc360 170-175
+  s_ac5a7d6179104f::t_3bca8d88b0503d 36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "434cf9eb688fe1d4dd941bc000a4627feb14cf8d",
+  "prompts": {},
+  "sessions": {
+    "s_ac5a7d6179104f": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "0d380a59-cfa1-4965-9d9f-97b72a5d3c16",
+        "model": "default"
+      },
+      "human_author": "aos-svg <artur.osinski@vonage.com>"
+    }
+  }
+}
