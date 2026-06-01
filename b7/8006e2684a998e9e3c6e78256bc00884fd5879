@@ -1,0 +1,19 @@
+SwiftUI/PictureInPicture/PictureInPicture/View/SubscriberVideoView.swift
+  s_ac5a7d6179104f::t_b1a4f7de67b4e4 5-15,24-25,27-31,35-38,40,51,55-56,58-67
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "b78006e2684a998e9e3c6e78256bc00884fd5879",
+  "prompts": {},
+  "sessions": {
+    "s_ac5a7d6179104f": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "0d380a59-cfa1-4965-9d9f-97b72a5d3c16",
+        "model": "default"
+      },
+      "human_author": "aos-svg <artur.osinski@vonage.com>"
+    }
+  }
+}
