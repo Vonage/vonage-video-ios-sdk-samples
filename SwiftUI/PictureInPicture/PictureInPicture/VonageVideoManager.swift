@@ -2,15 +2,15 @@ import AVKit
 import OpenTok
 import SwiftUI
 import UIKit
+import Combine
 
 final class VonageVideoManager: NSObject, ObservableObject {
     static let widgetRatio: CGFloat = 1.333
 
-    // *** Fill the following variables using your own Project info ***
-    // *** https://developer.vonage.com/en/video/getting-started          ***
-    // Replace with your Vonage application ID or OpenTok API key
-    let kApiKey = ""
-    // Replace with your generated session Id
+    // *** Fill using your Vonage Video project: https://dashboard.vonage.com/ ***
+    // Replace with your Vonage Application ID
+    let kAppId = ""
+    // Replace with your generated session ID
     let kSessionId = ""
     // Replace with your generated token
     let kToken = ""
@@ -33,6 +33,7 @@ final class VonageVideoManager: NSObject, ObservableObject {
 
     func configurePictureInPicture(with sourceView: UIView, videoFrame: CGRect) {
         guard pipController == nil else { return }
+        print("Configuring Picture in Picture")
 
         videoRender.pipBufferDisplayLayer = sampleBufferVideoCallView.sampleBufferDisplayLayer
         videoRender.pipBufferDisplayLayer?.frame = videoFrame
@@ -59,9 +60,15 @@ final class VonageVideoManager: NSObject, ObservableObject {
         pipController = AVPictureInPictureController(contentSource: contentSource)
         pipController?.canStartPictureInPictureAutomaticallyFromInline = true
         pipController?.delegate = self
+        updatePictureInPictureAvailability()
+    }
 
+    private func updatePictureInPictureAvailability() {
         DispatchQueue.main.async {
-            self.canStartPictureInPicture = self.pipController?.isPictureInPicturePossible ?? false
+            let isPossible = self.pipController?.isPictureInPicturePossible ?? false
+            self.canStartPictureInPicture = isPossible
+            print("PiP supported:", AVPictureInPictureController.isPictureInPictureSupported())
+            print("PiP possible:", isPossible)
         }
     }
 
@@ -70,7 +77,7 @@ final class VonageVideoManager: NSObject, ObservableObject {
     }
 
     private func doConnect() {
-        session = OTSession(apiKey: kApiKey, sessionId: kSessionId, delegate: self)
+        session = OTSession(applicationId: kAppId, sessionId: kSessionId, delegate: self)
         var error: OTError?
         defer {
             processError(error)
@@ -147,7 +154,9 @@ extension VonageVideoManager: OTSessionDelegate {
 }
 
 extension VonageVideoManager: OTSubscriberDelegate {
-    func subscriberDidConnect(toStream subscriberKit: OTSubscriberKit) {}
+    func subscriberDidConnect(toStream subscriberKit: OTSubscriberKit) {
+        print("Subscriber connected to stream")
+    }
 
     func subscriber(_ subscriber: OTSubscriberKit, didFailWithError error: OTError) {
         print("Subscriber failed: \(error.localizedDescription)")
@@ -158,6 +167,12 @@ extension VonageVideoManager: OTSubscriberDelegate {
 }
 
 extension VonageVideoManager: AVPictureInPictureControllerDelegate {
+    func pictureInPictureControllerIsPictureInPicturePossibleDidChange(
+        _ pictureInPictureController: AVPictureInPictureController
+    ) {
+        updatePictureInPictureAvailability()
+    }
+
     func pictureInPictureController(
         _ pictureInPictureController: AVPictureInPictureController,
         failedToStartPictureInPictureWithError error: Error
