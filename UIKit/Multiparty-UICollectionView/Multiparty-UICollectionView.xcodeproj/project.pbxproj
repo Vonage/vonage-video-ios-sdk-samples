@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		577817C62FC9879600D8666C /* VonageClientSDKVideo in Frameworks */ = {isa = PBXBuildFile; productRef = 577817C52FC9879600D8666C /* VonageClientSDKVideo */; };
 		A05376091EB1638C00645696 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05376001EB1638C00645696 /* AppDelegate.swift */; };
 		A053760A1EB1638C00645696 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A05376011EB1638C00645696 /* Assets.xcassets */; };
 		A053760B1EB1638C00645696 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05376021EB1638C00645696 /* LaunchScreen.storyboard */; };
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				577817C62FC9879600D8666C /* VonageClientSDKVideo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,10 +110,14 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
 			mainGroup = F852CCB61EA4D88200ADB206;
+			packageReferences = (
+				577817C42FC9879600D8666C /* XCRemoteSwiftPackageReference "vonage-video-client-sdk-swift" */,
+			);
 			productRefGroup = F852CCC01EA4D88200ADB206 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -271,7 +277,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -281,7 +288,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/Multiparty-UICollectionView/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tokbox.--Multiparty-UICollectionView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -293,7 +303,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/Multiparty-UICollectionView/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tokbox.--Multiparty-UICollectionView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -323,6 +336,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		577817C42FC9879600D8666C /* XCRemoteSwiftPackageReference "vonage-video-client-sdk-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Vonage/vonage-video-client-sdk-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.34.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		577817C52FC9879600D8666C /* VonageClientSDKVideo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 577817C42FC9879600D8666C /* XCRemoteSwiftPackageReference "vonage-video-client-sdk-swift" */;
+			productName = VonageClientSDKVideo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F852CCB71EA4D88200ADB206 /* Project object */;
 }

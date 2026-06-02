@@ -14,6 +14,7 @@
 		1F8B1BB82995A96400D8E8FB /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B1BB52995A96300D8E8FB /* MessagesView.swift */; };
 		1F8B1BB92995A96400D8E8FB /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B1BB62995A96300D8E8FB /* FormView.swift */; };
 		1F8B1D42299D8D0800D8E8FB /* VonageVideoSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8B1D41299D8D0800D8E8FB /* VonageVideoSDK.swift */; };
+		577817CF2FC987EE00D8666C /* VonageClientSDKVideo in Frameworks */ = {isa = PBXBuildFile; productRef = 577817CE2FC987EE00D8666C /* VonageClientSDKVideo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				577817CF2FC987EE00D8666C /* VonageClientSDKVideo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +130,9 @@
 				Base,
 			);
 			mainGroup = 1F8B1B9B2995A93600D8E8FB;
+			packageReferences = (
+				577817CD2FC987EE00D8666C /* XCRemoteSwiftPackageReference "vonage-video-client-sdk-swift" */,
+			);
 			productRefGroup = 1F8B1BA52995A93600D8E8FB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -357,6 +362,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		577817CD2FC987EE00D8666C /* XCRemoteSwiftPackageReference "vonage-video-client-sdk-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Vonage/vonage-video-client-sdk-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.34.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		577817CE2FC987EE00D8666C /* VonageClientSDKVideo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 577817CD2FC987EE00D8666C /* XCRemoteSwiftPackageReference "vonage-video-client-sdk-swift" */;
+			productName = VonageClientSDKVideo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1F8B1B9C2995A93600D8E8FB /* Project object */;
 }

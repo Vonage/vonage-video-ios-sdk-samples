@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6510F38796E0E44CC144B1FC /* Pods_Picture_In_Picture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0685123659B7FADE5415B782 /* Pods_Picture_In_Picture.framework */; };
+		577817C92FC987B100D8666C /* VonageClientSDKVideo in Frameworks */ = {isa = PBXBuildFile; productRef = 577817C82FC987B100D8666C /* VonageClientSDKVideo */; };
 		EA65E79C2BEE08920060F604 /* SampleBufferVideoCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA65E79B2BEE08920060F604 /* SampleBufferVideoCallView.swift */; };
 		F84DC3AF1D5C8BF400402BD9 /* ExampleVideoRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84DC3AE1D5C8BF400402BD9 /* ExampleVideoRender.swift */; };
 		F86C64BC1D5C8A150081846D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86C64BB1D5C8A150081846D /* AppDelegate.swift */; };
@@ -18,11 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0685123659B7FADE5415B782 /* Pods_Picture_In_Picture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Picture_In_Picture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C7B8F7E8A4C1EBDCE25C96B /* Pods-Custom-Video-Driver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Custom-Video-Driver.release.xcconfig"; path = "Target Support Files/Pods-Custom-Video-Driver/Pods-Custom-Video-Driver.release.xcconfig"; sourceTree = "<group>"; };
-		81DA78E557B6CC9FACB46457 /* Pods-Custom-Video-Driver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Custom-Video-Driver.debug.xcconfig"; path = "Target Support Files/Pods-Custom-Video-Driver/Pods-Custom-Video-Driver.debug.xcconfig"; sourceTree = "<group>"; };
-		859ECA77BD688D6216193F82 /* Pods-Picture-In-Picture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Picture-In-Picture.debug.xcconfig"; path = "Target Support Files/Pods-Picture-In-Picture/Pods-Picture-In-Picture.debug.xcconfig"; sourceTree = "<group>"; };
-		B049AB366F84CA3525E1BF9C /* Pods-Picture-In-Picture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Picture-In-Picture.release.xcconfig"; path = "Target Support Files/Pods-Picture-In-Picture/Pods-Picture-In-Picture.release.xcconfig"; sourceTree = "<group>"; };
 		EA017C342BF45C040010889B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		EA65E79B2BEE08920060F604 /* SampleBufferVideoCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleBufferVideoCallView.swift; sourceTree = "<group>"; };
 		F84DC3AE1D5C8BF400402BD9 /* ExampleVideoRender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleVideoRender.swift; sourceTree = "<group>"; };
@@ -40,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6510F38796E0E44CC144B1FC /* Pods_Picture_In_Picture.framework in Frameworks */,
+				577817C92FC987B100D8666C /* VonageClientSDKVideo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,7 +46,6 @@
 			isa = PBXGroup;
 			children = (
 				EA017C342BF45C040010889B /* Security.framework */,
-				0685123659B7FADE5415B782 /* Pods_Picture_In_Picture.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -59,10 +53,6 @@
 		5BC0EA00F0A0A1C324E1C486 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				81DA78E557B6CC9FACB46457 /* Pods-Custom-Video-Driver.debug.xcconfig */,
-				1C7B8F7E8A4C1EBDCE25C96B /* Pods-Custom-Video-Driver.release.xcconfig */,
-				859ECA77BD688D6216193F82 /* Pods-Picture-In-Picture.debug.xcconfig */,
-				B049AB366F84CA3525E1BF9C /* Pods-Picture-In-Picture.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -107,11 +97,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F86C64CA1D5C8A150081846D /* Build configuration list for PBXNativeTarget "Picture-In-Picture" */;
 			buildPhases = (
-				E666A80B93844C80118AD2EB /* [CP] Check Pods Manifest.lock */,
 				F86C64B41D5C8A150081846D /* Sources */,
 				F86C64B51D5C8A150081846D /* Frameworks */,
 				F86C64B61D5C8A150081846D /* Resources */,
-				5269D88C572E1907C803A5F4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,6 +137,9 @@
 				Base,
 			);
 			mainGroup = F86C64AF1D5C8A150081846D;
+			packageReferences = (
+				577817C72FC987B100D8666C /* XCRemoteSwiftPackageReference "vonage-video-client-sdk-swift" */,
+			);
 			productRefGroup = F86C64B91D5C8A150081846D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -170,49 +161,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5269D88C572E1907C803A5F4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Picture-In-Picture/Pods-Picture-In-Picture-resources.sh",
-				"${PODS_ROOT}/OTXCFramework/OpenTok.xcframework/ios-arm64/OpenTok.framework/selfie_segmentation.tflite",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/selfie_segmentation.tflite",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Picture-In-Picture/Pods-Picture-In-Picture-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E666A80B93844C80118AD2EB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Picture-In-Picture-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F86C64B41D5C8A150081846D /* Sources */ = {
@@ -349,14 +297,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		F86C64CB1D5C8A150081846D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 859ECA77BD688D6216193F82 /* Pods-Picture-In-Picture.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -370,7 +318,10 @@
 				);
 				INFOPLIST_FILE = "Lets-Build-OTPublisher/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tokbox.picture-in-picture";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -383,7 +334,6 @@
 		};
 		F86C64CC1D5C8A150081846D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B049AB366F84CA3525E1BF9C /* Pods-Picture-In-Picture.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -392,7 +342,10 @@
 				DEVELOPMENT_TEAM = PR6C39UQ38;
 				INFOPLIST_FILE = "Lets-Build-OTPublisher/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tokbox.picture-in-picture";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -423,6 +376,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		577817C72FC987B100D8666C /* XCRemoteSwiftPackageReference "vonage-video-client-sdk-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Vonage/vonage-video-client-sdk-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.34.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		577817C82FC987B100D8666C /* VonageClientSDKVideo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 577817C72FC987B100D8666C /* XCRemoteSwiftPackageReference "vonage-video-client-sdk-swift" */;
+			productName = VonageClientSDKVideo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F86C64B01D5C8A150081846D /* Project object */;
 }

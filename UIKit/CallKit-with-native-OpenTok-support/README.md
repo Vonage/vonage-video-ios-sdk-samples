@@ -6,14 +6,6 @@
 A sample app to demonstrate how to integrate the [CallKit](https://developer.apple.com/documentation/callkit) into OpenTok iOS SDK. This sample app is built based on the [SpeakerBox](https://developer.apple.com/library/content/samplecode/Speakerbox/Introduction/Intro.html) app from [WWDC 2016 CallKit Session](https://developer.apple.com/videos/play/wwdc2016/230/).
 
 For more information, see [this documentation](https://tokbox.com/developer/guides/mobile/ios/#user-content-call-kit).
-### Install the project files
-
-Use CocoaPods to install the project files and dependencies.
-
-1. Install CocoaPods as described in [CocoaPods Getting Started](https://guides.cocoapods.org/using/getting-started.html#getting-started).
-1. In Terminal, `cd` to your project directory and type `pod install`. (Sometimes, `pod update` is magical)
-1. Reopen your project in Xcode using the new `*.xcworkspace` file.
-
 ### Configure and build the app
 
 Configure the sample app code. Then, build and run the app.
