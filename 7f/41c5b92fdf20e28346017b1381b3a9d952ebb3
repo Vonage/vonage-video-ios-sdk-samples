@@ -1,0 +1,62 @@
+SwiftUI/BasicVideoCapturer/BasicVideoCapturer.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 175,238,262,264,280,299,301,317
+SwiftUI/BasicVideoCapturer/BasicVideoCapturer.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+  h_63b3605edfc3ba 9-10
+SwiftUI/BasicVideoChat/BasicVideoChat.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 176,240
+SwiftUI/BasicVideoRenderer/BasicVideoRenderer.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 176,240
+SwiftUI/ClientObservability/ClientObservability.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 176,240
+SwiftUI/CustomAudioDriver/CustomAudioDriver.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 176,240
+SwiftUI/PictureInPicture/PictureInPicture.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 188,251
+SwiftUI/ScreenSharing/ScreenSharing.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 175,238
+SwiftUI/SimpleMultiparty/SimpleMultiparty.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 175,238
+UIKit/Basic-Video-Chat/Basic-Video-Chat.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 204,258,278-280,286,298-300,306,308
+UIKit/Basic-Video-Chat/Basic-Video-Chat.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+  h_63b3605edfc3ba 1-15
+UIKit/Basic-Video-Chat/Basic-Video-Chat/Info.plist
+  h_63b3605edfc3ba 25-28
+UIKit/CallKit-with-native-OpenTok-support/CallKitDemo.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 279,335
+UIKit/CallKit/CallKitDemo.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 240,296
+UIKit/Custom-Audio-Driver/Custom-Audio-Driver.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 217,276
+UIKit/Custom-Video-Driver/Custom-Video-Driver.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 219,275
+UIKit/E2EE-Video-Chat/Basic-Video-Chat.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 206,260
+UIKit/FrameMetadata/FrameMetadata.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 219,275
+UIKit/Live-Photo-Capture/Live-Photo-Capture.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 232,289
+UIKit/Media-Transformers/Media-Transformers.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 213,267
+UIKit/Multiparty-UICollectionView/Multiparty-UICollectionView.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 211,269
+UIKit/Picture-In-Picture/Picture-In-Picture.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 233,289
+UIKit/Screen-Sharing/Screen-Sharing.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 217,276
+UIKit/Signals/Signals.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 209,269
+UIKit/Simple-Multiparty/Simple-Multiparty.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 209,268
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "7f41c5b92fdf20e28346017b1381b3a9d952ebb3",
+  "prompts": {},
+  "humans": {
+    "h_63b3605edfc3ba": {
+      "author": "Raúl Albín <raul.albin@vonage.com>"
+    }
+  }
+}
