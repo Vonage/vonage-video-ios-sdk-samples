@@ -56,3 +56,23 @@ UIKit/Simple-Multiparty/Simple-Multiparty.xcodeproj/project.pbxproj
     }
   }
 }
+
+UIKit/OpenTokSDKVersion.rb
+  s_beb226c805043f::t_d0ce3959231ee7 2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "4d3376cff29c5b429fd155a3b52fc931887d3ee7",
+  "prompts": {},
+  "sessions": {
+    "s_beb226c805043f": {
+      "agent_id": {
+        "tool": "kiro",
+        "id": "sess_90f8e9a7-0bc1-4419-8f0d-fa7502c5c959",
+        "model": "auto"
+      },
+      "human_author": "Raúl Albín <raul.albin@vonage.com>"
+    }
+  }
+}
