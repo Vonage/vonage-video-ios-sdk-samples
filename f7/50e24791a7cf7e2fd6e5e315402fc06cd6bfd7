@@ -1,0 +1,16 @@
+UIKit/OpenTokSDKVersion.rb
+  h_63b3605edfc3ba 1-2
+UIKit/Basic-Video-Chat/Basic-Video-Chat.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+  h_63b3605edfc3ba 1-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "f750e24791a7cf7e2fd6e5e315402fc06cd6bfd7",
+  "prompts": {},
+  "humans": {
+    "h_63b3605edfc3ba": {
+      "author": "Raúl Albín <raul.albin@vonage.com>"
+    }
+  }
+}
