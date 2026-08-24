@@ -48,7 +48,7 @@ extension AVCaptureSession.Preset {
 }
 
 protocol FrameCapturerMetadataDelegate {
-    func finishPreparingFrame(_ videoFrame: OTVideoFrame?)
+    func metadataForFrame() -> Data?
 }
 
 class ExampleVideoCapture: NSObject, OTVideoCapture {
@@ -321,7 +321,8 @@ extension ExampleVideoCapture: AVCaptureVideoDataOutputSampleBufferDelegate {
         let time = CMSampleBufferGetPresentationTimeStamp(sampleBuffer)
         CVPixelBufferLockBaseAddress(imageBuffer, CVPixelBufferLockFlags(rawValue: CVOptionFlags(0)))
         
-        videoCaptureConsumer.consumeImageBuffer(imageBuffer, orientation: videoFrameOrientation, timestamp: time, metadata: videoFrame.metadata)
+        let metadata = delegate?.metadataForFrame()
+        videoCaptureConsumer.consumeImageBuffer(imageBuffer, orientation: videoFrameOrientation, timestamp: time, metadata: metadata)
         
         CVPixelBufferUnlockBaseAddress(imageBuffer, CVPixelBufferLockFlags(rawValue: CVOptionFlags(0)))
     }

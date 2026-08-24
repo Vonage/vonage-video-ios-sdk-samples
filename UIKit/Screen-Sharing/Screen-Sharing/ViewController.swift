@@ -77,9 +77,9 @@ class ViewController: UIViewController {
         }
         let settings = OTPublisherSettings()
         settings.name = UIDevice.current.name
+        settings.publisherAudioFallbackEnabled = false
         publisher = OTPublisher(delegate: self, settings: settings)
         publisher?.videoType = .screen
-        publisher?.audioFallbackEnabled = false
         
         capturer = ScreenCapturer(withView: view)
         publisher?.videoCapture = capturer

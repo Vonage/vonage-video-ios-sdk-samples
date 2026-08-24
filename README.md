@@ -9,6 +9,12 @@ modify the source code herein for your own projects. Please consider sharing
 your modifications with us, especially if they might benefit other developers
 using the Vonage iOS SDK. See the [License](LICENSE) for more information.
 
+## Requirements
+
+- **Vonage Video iOS SDK 2.35.1**
+- **iOS 17.0** minimum deployment target
+- **Xcode 27** (iOS 27 supported)
+
 Table Of Contents
 -----------
 1. [Quick Start](#quick-start)

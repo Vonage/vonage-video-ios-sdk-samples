@@ -17,7 +17,6 @@
 		A062C62B1EE5FAA200FD64A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A062C62A1EE5FAA200FD64A3 /* Assets.xcassets */; };
 		A062C62E1EE5FAA200FD64A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A062C62C1EE5FAA200FD64A3 /* LaunchScreen.storyboard */; };
 		A0B080C81EF9BD4D0082691D /* Ringtone.caf in Resources */ = {isa = PBXBuildFile; fileRef = A0B080C71EF9BD4A0082691D /* Ringtone.caf */; };
-		A0F2087A1EEF442E00104C6C /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A0F208791EEF442E00104C6C /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +45,6 @@
 		A062C62D1EE5FAA200FD64A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A062C62F1EE5FAA200FD64A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0B080C71EF9BD4A0082691D /* Ringtone.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ringtone.caf; sourceTree = "<group>"; };
-		A0F208791EEF442E00104C6C /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A0F2087B1EEF449800104C6C /* CallKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CallKitDemo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,7 +91,6 @@
 		A062C6171EE5FAA200FD64A3 = {
 			isa = PBXGroup;
 			children = (
-				A0F208791EEF442E00104C6C /* Podfile */,
 				A062C6221EE5FAA200FD64A3 /* CallKitDemo */,
 				6FA799CA2DE9E21C00977B46 /* Frameworks */,
 				A062C6211EE5FAA200FD64A3 /* Products */,
@@ -201,7 +198,6 @@
 				A0B080C81EF9BD4D0082691D /* Ringtone.caf in Resources */,
 				A062C62E1EE5FAA200FD64A3 /* LaunchScreen.storyboard in Resources */,
 				A062C62B1EE5FAA200FD64A3 /* Assets.xcassets in Resources */,
-				A0F2087A1EEF442E00104C6C /* Podfile in Resources */,
 				A062C6291EE5FAA200FD64A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,7 +419,7 @@
 			repositoryURL = "https://github.com/Vonage/vonage-video-client-sdk-swift.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.34.0;
+				minimumVersion = 2.35.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
