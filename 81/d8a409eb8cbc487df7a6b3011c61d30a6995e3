@@ -1,0 +1,29 @@
+SwiftUI/BasicVideoChat/BasicVideoChat.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 172,236
+UIKit/Basic-Video-Chat/Basic-Video-Chat.xcodeproj/project.pbxproj
+  s_929f4fe375131e::t_b7605910d5335b 278-279,297-298
+  h_63b3605edfc3ba 285,304
+SwiftUI/BasicVideoCapturer/BasicVideoCapturer.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 262,264,280,317
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "81d8a409eb8cbc487df7a6b3011c61d30a6995e3",
+  "prompts": {},
+  "humans": {
+    "h_63b3605edfc3ba": {
+      "author": "Raúl Albín <raul.albin@vonage.com>"
+    }
+  },
+  "sessions": {
+    "s_929f4fe375131e": {
+      "agent_id": {
+        "tool": "kiro",
+        "id": "sess_b4798bf5-8ddd-4c3e-b885-24c48024f068",
+        "model": "auto"
+      },
+      "human_author": "Raúl Albín <raul.albin@vonage.com>"
+    }
+  }
+}
