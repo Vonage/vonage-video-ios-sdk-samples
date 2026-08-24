@@ -1,0 +1,14 @@
+SwiftUI/BasicVideoCapturer/BasicVideoCapturer.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 299,301
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "40eb8f03eccb7674377d2b745909b0a2fc6a5110",
+  "prompts": {},
+  "humans": {
+    "h_63b3605edfc3ba": {
+      "author": "Raúl Albín <raul.albin@vonage.com>"
+    }
+  }
+}
