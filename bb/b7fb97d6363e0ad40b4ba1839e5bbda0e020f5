@@ -1,0 +1,14 @@
+UIKit/Custom-Video-Driver/Lets-Build-OTPublisher/ExampleVideoCapture.swift
+  h_63b3605edfc3ba 318
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "bbb7fb97d6363e0ad40b4ba1839e5bbda0e020f5",
+  "prompts": {},
+  "humans": {
+    "h_63b3605edfc3ba": {
+      "author": "Raúl Albín <raul.albin@vonage.com>"
+    }
+  }
+}
