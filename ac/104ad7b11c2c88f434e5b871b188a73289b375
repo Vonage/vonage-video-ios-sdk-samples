@@ -1,0 +1,14 @@
+SwiftUI/BasicVideoChat/BasicVideoChat.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 172,236
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "ac104ad7b11c2c88f434e5b871b188a73289b375",
+  "prompts": {},
+  "humans": {
+    "h_63b3605edfc3ba": {
+      "author": "Raúl Albín <raul.albin@vonage.com>"
+    }
+  }
+}
