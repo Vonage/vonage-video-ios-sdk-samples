@@ -15,11 +15,9 @@ let apiKey = ""
 let sessionId = ""
 let token = ""
 
-@UIApplicationMain
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
-    
     let pushRegistry = PKPushRegistry(queue: DispatchQueue.main)
     let callManager = SpeakerboxCallManager()
     var providerDelegate: ProviderDelegate?
@@ -34,6 +32,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         pushRegistry.desiredPushTypes = [.voIP]
         
         return true
+    }
+
+    // MARK: UISceneSession Lifecycle
+
+    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    }
+
+    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
     }
 }
 

@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vonage/vonage-video-client-sdk-swift.git",
       "state" : {
-        "revision" : "70bfd195ab2c3e5cfcd2c84a30275806a841ae68",
-        "version" : "2.32.1"
+        "revision" : "90f932330fa01f69928b92654ab5f5099447f46a",
+        "version" : "2.35.1"
       }
     }
   ],

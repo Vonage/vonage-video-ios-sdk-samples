@@ -23,6 +23,7 @@ final class VonageVideoManager: NSObject, ObservableObject {
     private lazy var publisher: OTPublisher? = {
         let settings = OTPublisherSettings()
         settings.name = UIDevice.current.name
+        settings.publisherAudioFallbackEnabled = false
         return OTPublisher(delegate: self, settings: settings)
     }()
     
@@ -101,7 +102,6 @@ extension VonageVideoManager: OTSessionDelegate {
             return
         }
         publisher.videoType = .screen
-        publisher.audioFallbackEnabled = false
         guard let fullScreenView = UIApplication.shared.rootViewController?.view else {
             fatalError("rootViewController is nil, please check your view structure, or use custom ViewRepresentable object")
         }
