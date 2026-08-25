@@ -1,0 +1,130 @@
+UIKit/Basic-Video-Chat/Basic-Video-Chat.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 16,27,46-47,151-152
+UIKit/Picture-In-Picture/Lets-Build-OTPublisher/SceneDelegate.swift
+  s_59763acce2e6ca::t_c99d398b2c793c 1-25
+UIKit/E2EE-Video-Chat/Basic-Video-Chat/SceneDelegate.swift
+  s_59763acce2e6ca::t_9ad4d30165eceb 1-25
+UIKit/Screen-Sharing/Screen-Sharing/SceneDelegate.swift
+  s_59763acce2e6ca::t_3298989cdf4630 1-25
+UIKit/Basic-Video-Chat/Basic-Video-Chat/Info.plist
+  s_59763acce2e6ca::t_d8c23ffd34ce75 31-49
+UIKit/CallKit-with-native-OpenTok-support/CallKitDemo/Info.plist
+  s_59763acce2e6ca::t_438b8e0273305f 49-67
+UIKit/CallKit-with-native-OpenTok-support/CallKitDemo/SceneDelegate.swift
+  s_59763acce2e6ca::t_a019a2976cbfc6 1-25
+UIKit/Custom-Video-Driver/Lets-Build-OTPublisher/Info.plist
+  s_59763acce2e6ca::t_a6674b25c0eb12 27-45
+UIKit/Screen-Sharing/Screen-Sharing/Info.plist
+  s_59763acce2e6ca::t_01b13e8616ef00 25-43
+UIKit/Simple-Multiparty/Simple-Multiparty/Info.plist
+  s_59763acce2e6ca::t_d7a314bf604b67 25-43
+UIKit/Custom-Audio-Driver/Custom-Audio-Driver/SceneDelegate.swift
+  s_59763acce2e6ca::t_17c59063399b0e 1-25
+UIKit/Basic-Video-Chat/Basic-Video-Chat/AppDelegate.swift
+  s_59763acce2e6ca::t_c8ac548675a16d 11
+  s_59763acce2e6ca::t_4077244e70b82f 18-26
+UIKit/Basic-Video-Chat/Basic-Video-Chat/SceneDelegate.swift
+  s_59763acce2e6ca::t_8370a3290475d7 1-25
+UIKit/Media-Transformers/Media-Transformers/Info.plist
+  s_59763acce2e6ca::t_7ef9a1722f03d1 27-45
+UIKit/Multiparty-UICollectionView/Multiparty-UICollectionView/Info.plist
+  s_59763acce2e6ca::t_cbea747bb23872 29-47
+UIKit/Custom-Audio-Driver/Custom-Audio-Driver/Info.plist
+  s_59763acce2e6ca::t_12187900a80a28 25-43
+UIKit/Custom-Video-Driver/Lets-Build-OTPublisher/SceneDelegate.swift
+  s_59763acce2e6ca::t_ec139f44825917 1-25
+UIKit/E2EE-Video-Chat/Basic-Video-Chat/Info.plist
+  s_59763acce2e6ca::t_a852ce6397de3e 27-45
+UIKit/Picture-In-Picture/Lets-Build-OTPublisher/Info.plist
+  s_59763acce2e6ca::t_bdaba77acf8a08 37-55
+UIKit/Simple-Multiparty/Simple-Multiparty/AppDelegate.swift
+  s_59763acce2e6ca::t_ca33fddfeb8551 11
+  s_59763acce2e6ca::t_af32153504c2ae 18,20-21,24
+UIKit/Multiparty-UICollectionView/Multiparty-UICollectionView/AppDelegate.swift
+  s_59763acce2e6ca::t_1cf24fe0d8613c 18,20-21,24
+  s_59763acce2e6ca::t_00bddc578f0953 11
+UIKit/Simple-Multiparty/Simple-Multiparty/SceneDelegate.swift
+  s_59763acce2e6ca::t_6358891a7ea932 1-25
+UIKit/Picture-In-Picture/Lets-Build-OTPublisher/AppDelegate.swift
+  s_59763acce2e6ca::t_b9509d61cd5589 3
+  s_59763acce2e6ca::t_b77075a5c478ae 10,12-13,16
+UIKit/CallKit-with-native-OpenTok-support/CallKitDemo/AppDelegate.swift
+  s_59763acce2e6ca::t_597b20ac5b0331 37-45
+  s_59763acce2e6ca::t_7753b817fa8008 18
+UIKit/Media-Transformers/Media-Transformers/AppDelegate.swift
+  s_59763acce2e6ca::t_4d96fab1e219b2 18-26
+  s_59763acce2e6ca::t_bcee32e7b2bc44 11
+UIKit/Custom-Audio-Driver/Custom-Audio-Driver/AppDelegate.swift
+  s_59763acce2e6ca::t_ed8c2dc3d75f12 18,20-21,24
+  s_59763acce2e6ca::t_960f5a8bce9fd3 11
+UIKit/Live-Photo-Capture/Live-Photo-Capture/SceneDelegate.swift
+  s_59763acce2e6ca::t_9bb97d4d286675 1-25
+UIKit/Live-Photo-Capture/Live-Photo-Capture/AppDelegate.swift
+  s_59763acce2e6ca::t_00d2906797263d 18,20-21,24
+  s_59763acce2e6ca::t_2e5a6df6f25b56 11
+UIKit/CallKit/CallKitDemo/AppDelegate.swift
+  s_59763acce2e6ca::t_f441095ca714f5 36-44
+  s_59763acce2e6ca::t_d67efcb41380b1 18
+UIKit/CallKit/CallKitDemo/SceneDelegate.swift
+  s_59763acce2e6ca::t_13c04ba0a4315c 1-25
+UIKit/E2EE-Video-Chat/Basic-Video-Chat/AppDelegate.swift
+  s_59763acce2e6ca::t_c873e721f4afbf 11
+  s_59763acce2e6ca::t_2d0d43451bc1b1 18-26
+UIKit/CallKit/CallKitDemo/Info.plist
+  s_59763acce2e6ca::t_61495bb3ba5c5d 49-67
+UIKit/Media-Transformers/Media-Transformers/SceneDelegate.swift
+  s_59763acce2e6ca::t_e1f23dbab84efe 1-25
+UIKit/Multiparty-UICollectionView/Multiparty-UICollectionView/SceneDelegate.swift
+  s_59763acce2e6ca::t_a124a0931a2f1f 1-25
+UIKit/Live-Photo-Capture/Live-Photo-Capture/Info.plist
+  s_59763acce2e6ca::t_4c759ff26c3373 27-45
+UIKit/Screen-Sharing/Screen-Sharing/AppDelegate.swift
+  s_59763acce2e6ca::t_b9642675253ed5 11
+  s_59763acce2e6ca::t_7edf60dc35dbd7 18,20-21,24
+UIKit/Custom-Video-Driver/Lets-Build-OTPublisher/AppDelegate.swift
+  s_59763acce2e6ca::t_b4da1e8dcc213a 11
+  s_59763acce2e6ca::t_5d5a9dcd0592d4 18,20-21,24
+UIKit/CallKit-with-native-OpenTok-support/CallKitDemo.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 20,50,117-118,219-220
+UIKit/CallKit/CallKitDemo.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 21,40,79-80,183-184
+UIKit/Custom-Audio-Driver/Custom-Audio-Driver.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 18,31,50-51,160-161
+UIKit/Custom-Video-Driver/Custom-Video-Driver.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 19,33,68-69,161-162
+UIKit/E2EE-Video-Chat/Basic-Video-Chat.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 16,27,46-47,153-154
+UIKit/Live-Photo-Capture/Live-Photo-Capture.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 20,35,71-72,175-176
+UIKit/Media-Transformers/Media-Transformers.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 18,30,50-51,160-161
+UIKit/Multiparty-UICollectionView/Multiparty-UICollectionView.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 17,29,48-49,155-156
+UIKit/Picture-In-Picture/Picture-In-Picture.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 18,32,84-85,177-178
+UIKit/Screen-Sharing/Screen-Sharing.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 18,31,50-51,159-160
+UIKit/Simple-Multiparty/Simple-Multiparty.xcodeproj/project.pbxproj
+  h_63b3605edfc3ba 16,27,46-47,152-153
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "853223243ea1ac5a7c21d3a487b87840a272028d",
+  "prompts": {},
+  "humans": {
+    "h_63b3605edfc3ba": {
+      "author": "Raúl Albín <raul.albin@vonage.com>"
+    }
+  },
+  "sessions": {
+    "s_59763acce2e6ca": {
+      "agent_id": {
+        "tool": "kiro",
+        "id": "sess_71dbb221-d157-497e-9696-bf636490e488",
+        "model": "auto"
+      },
+      "human_author": "Raúl Albín <raul.albin@vonage.com>"
+    }
+  }
+}
