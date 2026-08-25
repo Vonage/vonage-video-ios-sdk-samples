@@ -15,6 +15,7 @@
 		A05375ED1EB1636800645696 /* logo_opentok_registered.png in Resources */ = {isa = PBXBuildFile; fileRef = A05375E51EB1636800645696 /* logo_opentok_registered.png */; };
 		A05375EE1EB1636800645696 /* ScreenCapturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05375E61EB1636800645696 /* ScreenCapturer.swift */; };
 		A05375EF1EB1636800645696 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05375E71EB1636800645696 /* ViewController.swift */; };
+		2EE9A45BF6D3370835BBBB4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31AAA8F3C15B367842AE4B5 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		A05375E61EB1636800645696 /* ScreenCapturer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenCapturer.swift; sourceTree = "<group>"; };
 		A05375E71EB1636800645696 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F8DE15B31D951F9200EFFA79 /* Screen-Sharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Screen-Sharing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D31AAA8F3C15B367842AE4B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,8 @@
 			isa = PBXGroup;
 			children = (
 				A05375DE1EB1636800645696 /* AppDelegate.swift */,
+
+				D31AAA8F3C15B367842AE4B5 /* SceneDelegate.swift */,
 				A05375DF1EB1636800645696 /* Assets.xcassets */,
 				A05375E01EB1636800645696 /* LaunchScreen.storyboard */,
 				A05375E21EB1636800645696 /* Main.storyboard */,
@@ -152,6 +156,8 @@
 			files = (
 				A05375EF1EB1636800645696 /* ViewController.swift in Sources */,
 				A05375E81EB1636800645696 /* AppDelegate.swift in Sources */,
+
+				2EE9A45BF6D3370835BBBB4B /* SceneDelegate.swift in Sources */,
 				A05375EE1EB1636800645696 /* ScreenCapturer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,6 +15,7 @@
 		A053761E1EB16D9700645696 /* DefaultAudioDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05376171EB16D9700645696 /* DefaultAudioDevice.swift */; };
 		A05376201EB16D9700645696 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05376191EB16D9700645696 /* ViewController.swift */; };
 		A07707051EDF7B8300E8FB97 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A07707041EDF7B8300E8FB97 /* Default-568h@2x.png */; };
+		02FA54BE1CC387EA78551840 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BCC45175D5969E7AF6DEE7 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		A05376191EB16D9700645696 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A07707041EDF7B8300E8FB97 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F882D72A1D92B85B00FD72FD /* Custom-Audio-Driver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Custom-Audio-Driver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9BCC45175D5969E7AF6DEE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,8 @@
 			isa = PBXGroup;
 			children = (
 				A05376111EB16D9700645696 /* AppDelegate.swift */,
+
+				D9BCC45175D5969E7AF6DEE7 /* SceneDelegate.swift */,
 				A05376121EB16D9700645696 /* Assets.xcassets */,
 				A05376131EB16D9700645696 /* LaunchScreen.storyboard */,
 				A05376151EB16D9700645696 /* Main.storyboard */,
@@ -153,6 +157,8 @@
 				A05376201EB16D9700645696 /* ViewController.swift in Sources */,
 				A053761E1EB16D9700645696 /* DefaultAudioDevice.swift in Sources */,
 				A053761A1EB16D9700645696 /* AppDelegate.swift in Sources */,
+
+				02FA54BE1CC387EA78551840 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,7 @@
 		ADE6E7BE2A93B07300895674 /* Vonage_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE6E7BD2A93B07300895674 /* Vonage_Logo.png */; };
 		BB0F2D6A2ECA9C540047AF16 /* VonageClientSDKVideoTransformers in Frameworks */ = {isa = PBXBuildFile; productRef = BB0F2D692ECA9C540047AF16 /* VonageClientSDKVideoTransformers */; };
 		BB0F2D6D2ECA9CFB0047AF16 /* VonageClientSDKVideo in Frameworks */ = {isa = PBXBuildFile; productRef = BB0F2D6C2ECA9CFB0047AF16 /* VonageClientSDKVideo */; };
+		96B9D09BB92C9312ED814AA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8676F6DE31CD79D5DAC582 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A05375D61EB1633400645696 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ADE6E7BD2A93B07300895674 /* Vonage_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Vonage_Logo.png; path = "Media-Transformers/Vonage_Logo.png"; sourceTree = "<group>"; };
 		F86C649A1D5C7C630081846D /* Media-Transformers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Media-Transformers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE8676F6DE31CD79D5DAC582 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,8 @@
 			isa = PBXGroup;
 			children = (
 				A05375CF1EB1633400645696 /* AppDelegate.swift */,
+
+				DE8676F6DE31CD79D5DAC582 /* SceneDelegate.swift */,
 				A05375D01EB1633400645696 /* Assets.xcassets */,
 				A05375D11EB1633400645696 /* LaunchScreen.storyboard */,
 				A05375D31EB1633400645696 /* Main.storyboard */,
@@ -153,6 +157,8 @@
 			files = (
 				A05375DC1EB1633400645696 /* ViewController.swift in Sources */,
 				A05375D71EB1633400645696 /* AppDelegate.swift in Sources */,
+
+				96B9D09BB92C9312ED814AA3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
