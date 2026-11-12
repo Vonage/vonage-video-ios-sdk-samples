@@ -1,0 +1,31 @@
+UIKit/Screen-Sharing/Screen-Sharing.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+  s_7f45c2bb78c64b::t_0df064532c173b 9-10
+UIKit/CallKit-with-native-OpenTok-support/CallKitDemo.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+  s_7f45c2bb78c64b::t_e79a37a85d109f 9-10
+UIKit/Simple-Multiparty/Simple-Multiparty.xcodeproj/project.pbxproj
+  s_7f45c2bb78c64b::t_fb7cd1a61bade5 354
+UIKit/Multiparty-UICollectionView/Multiparty-UICollectionView.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+  s_7f45c2bb78c64b::t_a3848ba29b34a5 9-10
+UIKit/Custom-Video-Driver/Custom-Video-Driver.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+  s_7f45c2bb78c64b::t_418d34e8eb25a1 9-10
+UIKit/Multiparty-UICollectionView/Multiparty-UICollectionView.xcodeproj/project.pbxproj
+  s_7f45c2bb78c64b::t_c4483bceed081e 352
+UIKit/Basic-Video-Chat/Basic-Video-Chat.xcodeproj/project.pbxproj
+  s_7f45c2bb78c64b::t_97f3f698a887cf 346
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9939b5347b3875da8bd634031ff445bb2dfe899e",
+  "prompts": {},
+  "sessions": {
+    "s_7f45c2bb78c64b": {
+      "agent_id": {
+        "tool": "kiro",
+        "id": "sess_62f94486-eda8-40ec-8d95-e067fbfb8e5a",
+        "model": "auto"
+      },
+      "human_author": "Raúl Albín <raul.albin@vonage.com>"
+    }
+  }
+}
