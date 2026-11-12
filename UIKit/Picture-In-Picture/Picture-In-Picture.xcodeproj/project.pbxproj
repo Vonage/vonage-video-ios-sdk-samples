@@ -389,7 +389,7 @@
 			repositoryURL = "https://github.com/Vonage/vonage-video-client-sdk-swift.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.35.1;
+				minimumVersion = 2.36.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

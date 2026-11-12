@@ -1,2 +1,2 @@
-OpenTokSDKVersion = '2.35.1'
+OpenTokSDKVersion = '2.36.0'
 MinIosSdkVersion = '17.0'
